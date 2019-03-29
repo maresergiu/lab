@@ -34,7 +34,7 @@ window.lab || (window.lab = {});
 
     lab.helpers.isContentScrolable(); // detect if js in enable
 
-    lab.cache.$html.removeClass('no-js').addClass('js'); // animate the elements that are in the viewport on load
+    lab.cache.$html.toggleClass('no-js js'); // animate the elements that are in the viewport on load
 
     lab.helpers.animateElemInView(); // window events
     // -------------

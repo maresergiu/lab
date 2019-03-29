@@ -1,19 +1,19 @@
 lab.helpers = {
     // check to see if element is above the window
     elemAboveTheWindow: function ($checkElement) {
-        if (($checkElement.offset().top + $checkElement.height()) > temp.cache.$window.scrollTop()) {
+        if (($checkElement.offset().top + $checkElement.height()) > lab.cache.$window.scrollTop()) {
             return true;
         }
     },
     // check if element is visible on the screen
     elemIsInView: function ($checkElement) {
-        if (temp.cache.$window.scrollTop() + temp.cache.$window.height() > $checkElement.offset().top) {
+        if (lab.cache.$window.scrollTop() + lab.cache.$window.height() > $checkElement.offset().top) {
             return true;
         }
     },
     // calling the scroll plugin
     scrollBarPlug: function ($starPoint, plugInObj) {
-        if (temp.cache.$window.width() > temp.config.breakpoints.X_MEDIUM_WIDTH) {
+        if (lab.cache.$window.width() > lab.config.breakpoints.X_MEDIUM_WIDTH) {
             var settings = typeof plugInObj === 'undefined' ? {} : plugInObj;
 
             $starPoint.mCustomScrollbar(settings);
@@ -130,10 +130,10 @@ lab.helpers = {
     },
     // toggle the loader visibility
     toggleLoader: function () {
-        var $loader = temp.cache.$main.find('.loader-mod');
+        var $loader = lab.cache.$main.find('.loader-mod');
 
         // reset the view
-        temp.helpers.isContentScrolable();
+        lab.helpers.isContentScrolable();
 
         if ($loader.hasClass('anim')) {
             $loader.removeClass('anim');
@@ -151,20 +151,20 @@ lab.helpers = {
     },
     // check if the page content is bigger that window's height
     isContentScrolable: function () {
-        temp.cache.$html.removeClass('sp');
+        lab.cache.$html.removeClass('sp');
 
         // if map page is present and the page is loaded on desktop or the height of the body is smaller then the height of window  
-        if ((temp.cache.$body.hasClass('map-page') && temp.cache.$window.width() > temp.config.breakpoints.X_MEDIUM_WIDTH) || (temp.cache.$body.height() < temp.cache.$window.height())) {
-            temp.cache.$html.addClass('sp');
+        if ((lab.cache.$body.hasClass('map-page') && lab.cache.$window.width() > lab.config.breakpoints.X_MEDIUM_WIDTH) || (lab.cache.$body.height() < lab.cache.$window.height())) {
+            lab.cache.$html.addClass('sp');
         }
     },
     // animate de elements when entering the viewport
     animateElemInView: function () {
-        var $animElem = temp.cache.$main.find('.anim-mod');
+        var $animElem = lab.cache.$main.find('.anim-mod');
 
         $animElem.each(function () {
             var $thisAnimElem = $(this),
-                elemIsInView = temp.helpers.elemIsInView($thisAnimElem),
+                elemIsInView = lab.helpers.elemIsInView($thisAnimElem),
                 parentDelay;
 
             function animSubElem($thisAnimElem) {
@@ -180,7 +180,7 @@ lab.helpers = {
 
             // when there are synchronous animations on the same line
             if (elemIsInView && $thisAnimElem.data('sync')) {
-                parentDelay = elemIsInView && (temp.cache.$window.width() > temp.config.breakpoints.SMALL_WIDTH) ? $thisAnimElem.data('delay') : 300;
+                parentDelay = elemIsInView && (lab.cache.$window.width() > lab.config.breakpoints.SMALL_WIDTH) ? $thisAnimElem.data('delay') : 300;
 
                 // trigger parent animation
                 setTimeout(function () {
