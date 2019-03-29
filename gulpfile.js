@@ -97,7 +97,7 @@ function babelJsFunc() {
         presets: ['@babel/env']
       }))
       .pipe(minifyJs())
-      .pipe(concat('script.js'))
+      .pipe(concat('script-bundle-min.js'))
       .pipe(gulp.dest('public/assets/script'));
 
     resolve();
