@@ -8,7 +8,7 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-temp.helpers = {
+lab.helpers = {
   // check to see if element is above the window
   elemAboveTheWindow: function elemAboveTheWindow($checkElement) {
     if ($checkElement.offset().top + $checkElement.height() > temp.cache.$window.scrollTop()) {
@@ -147,7 +147,7 @@ temp.helpers = {
         markup = template(data);
     return markup;
   },
-  // check if the page content is bigger that window's height    
+  // check if the page content is bigger that window's height
   isContentScrolable: function isContentScrolable() {
     temp.cache.$html.removeClass('sp'); // if map page is present and the page is loaded on desktop or the height of the body is smaller then the height of window  
 

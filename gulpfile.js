@@ -29,7 +29,6 @@ const gulp = require('gulp'),
   jsFile = {
     destination: 'public/assets/scripts',
     modifyThisFiles: [
-      'assets/scripts/libs/*.js',
       'assets/scripts/helpers.js',
       'assets/scripts/global.js',
       'assets/scripts/modules/*.js'
@@ -96,8 +95,6 @@ function babelJsFunc() {
       .pipe(babel({
         presets: ['@babel/env']
       }))
-      .pipe(minifyJs())
-      .pipe(concat('script-bundle-min.js'))
       .pipe(gulp.dest(jsFile.destination));
 
     resolve();
