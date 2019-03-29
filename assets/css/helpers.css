@@ -1,7 +1,13 @@
 /* variables */
 :root {
     /* colors */
-    --first-color: #00457c;   
+    --first-color: #ffffff;
+    --second-color: #ffff00;
+    --third-color: #a94442;
+    --fourth-color: #000000;
+    --fifth-color: #cccccc;
+
+    $fastTransition: 0.3s;
 }
 
 /* media queries */
