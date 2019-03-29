@@ -6,12 +6,7 @@ html,
 body { padding: 0; margin: 0; font-family: sans-serif; }
 body { font-size: 16px; font-size: 1.6rem; }
 
-h1,
-h2, 
-h3,
-h4,
-h5,
-h6,
+:--headings,
 p { padding: 0; margin: 0 0 20px 0; font-family: serif; color: #181515; }
 
 ul,

@@ -1,0 +1,13 @@
+/* variables */
+:root {
+    /* colors */
+    --first-color: #00457c;   
+}
+
+/* media queries */
+@custom-media --medium-viewport (max-width: 1024px);
+@custom-media --small-viewport (max-width: 768px);
+@custom-media --very-small-viewport (max-width: 420px);
+
+/* custom selectors */
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
