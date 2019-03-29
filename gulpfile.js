@@ -98,7 +98,7 @@ function babelJsFunc() {
       }))
       .pipe(minifyJs())
       .pipe(concat('script-bundle-min.js'))
-      .pipe(gulp.dest('public/assets/script'));
+      .pipe(gulp.dest(jsFile.destination));
 
     resolve();
   });
