@@ -5,6 +5,8 @@
 .hero-mod .mod-carousel .slide-container .slide .img { width: 100%; height: auto; min-width: 100%; min-height: 100%; }
 .hero-mod .mod-carousel > .pagination-controls > button { background-color: #fff; border: 1px solid #fff; }
 .hero-mod .mod-carousel > .pagination-controls > button.active { background: #ccc !important; }
+.hero-mod .mod-carousel > fieldset .step.next,
+.hero-mod .mod-carousel > fieldset .step.prev { display: none !important; }
 @media only screen and (max-width: 576px) {
  .hero-mod { padding: 12px 0 47px; }
  .hero-mod .mod-carousel .slide-container .slide .img { width: auto; height: 100%; }
