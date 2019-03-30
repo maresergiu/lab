@@ -1,0 +1,5 @@
+.rich-text-mod { background-color: var(--sixth-color); padding: 10px 12px; 
+    .title { margin: 5px 0 15px; }
+    .text { font-family: 'proxima-light', sans-serif; color: var(--fifth-color); }
+}
+.rich-text-mod.anim { animation: lab-global-slideUp var(--fast-transition); }
