@@ -3,18 +3,19 @@
 /* fonts
    ----- */
 /* sans-serif */
-@font-face { font-family: 'azo-regular'; src: url( '../fonts/sans-serif/azo-regular.ttf' ) format( 'ttf' ), url( '../fonts/sans-serif/azo-regular.woff' ) format( 'woff' ); }
+@font-face { font-family: 'azo-regular'; src: url( 'fonts/sans-serif/azo-regular.ttf' ) format( 'ttf' ), url( 'fonts/sans-serif/azo-regular.woff' ) format( 'woff' ); }
 /* serif */
-@font-face { font-family: 'proxima-light'; src: url( '../fonts/serif/proximaNova-light.ttf' ) format( 'ttf' ), url( '../fonts/serif/proximaNova-light.woff' ) format( 'woff' ); }
-@font-face { font-family: 'proxima-regular'; src: url( '../fonts/serif/proximaNova-regular.ttf' ) format( 'ttf' ), url( '../fonts/serif/proximaNova-regular.woff' ) format( 'woff' ); }
-@font-face { font-family: 'proxima-semiBold'; src: url( '../fonts/serif/proximaNova-semiBold.ttf' ) format( 'ttf' ), url( '../fonts/serif/proximaNova-semiBold.woff' ) format( 'woff' ); }
+/* proxima doesn't allow conversion to woff */
+@font-face { font-family: 'proxima-light'; src: url( 'fonts/serif/proximaNova-light.ttf' ) format( 'ttf' ); }
+@font-face { font-family: 'proxima-regular'; src: url( 'fonts/serif/proximaNova-regular.ttf' ) format( 'ttf' ); }
+@font-face { font-family: 'proxima-semiBold'; src: url( 'fonts/serif/proximaNova-semiBold.ttf' ) format( 'ttf' ); }
+@font-face { font-family: 'proxima-bold'; src: url( 'fonts/serif/proximaNova-bold.otf' ) format( 'otf' ); }
 /* DOM tags */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 html { font-size: 62.5%; height: 100%; }
 html, body { padding: 0; margin: 0; font-family: 'proxima-regular', sans-serif; }
 body { font-size: 16px; font-size: 1.6rem; }
-h1, h2, h3, h4, h5, h6 { font-family: 'azo-regular', serif; }
-h1, h2, h3, h4, h5, h6, p { padding: 0; margin: 0 0 20px 0; color: #fff; }
+h1, h2, h3, h4, h5, h6, p { padding: 0; margin: 0 0 20px 0; }
 ul, ol { margin: 0; padding: 0; }
 ul li { display: inline-block; list-style-type: none; }
 a { -webkit-transition: .3s; -o-transition: .3s; -moz-transition: .3s; transition: .3s; }
@@ -42,7 +43,8 @@ header, section, footer, aside, nav, main, article, figure { display: block; }
 .mod.small { padding: 20px 0; }
 .mod.small.space { padding: 20px; }
 /* cta */
-.cta { border: none; background: transparent; outline: none; }
+.cta { border: none; background: transparent; outline: none; padding: 0; }
+.cta.action { background-color: #ff0; color: #3b4b54; padding: 10px 20px; font-family: 'proxima-semiBold', sans-serif; font-size: 26px; font-size: 2.6rem; }
 /* float */
 .left { float: left; }
 .right { float: right; }
@@ -51,9 +53,7 @@ header, section, footer, aside, nav, main, article, figure { display: block; }
 .icon { width: 100%; max-width: 50px; height: 100%; max-height: 50px; }
 .icon svg { width: 100%; height: auto; }
 /* text and titles */
-.title, .sub-title { font-size: 40px; font-size: 4rem; padding-left: 10px; }
-.sub-title { font-size: 25px; font-size: 2.5rem; }
-.sub-title.smp { padding-left: 0; }
+.title { font-size: 26px; font-size: 2.6rem; color: #ff0; }
 .text { font-size: 16px; font-size: 1.6rem; }
 .uppercase { text-transform: uppercase; }
 /* alignment */

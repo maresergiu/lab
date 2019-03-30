@@ -1,1 +1,11 @@
-.hero-mod { position: relative; z-index: 0; }
+.hero-mod { position: relative; padding: 60px 0; z-index: 0; overflow: hidden; }
+.hero-mod .rich-text-mod { position: relative; max-width: 426px; z-index: 2; }
+.hero-mod .mod-carousel { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 1; }
+.hero-mod .mod-carousel .slide-container { position: absolute; top: 0; left: 0; overflow: hidden; }
+.hero-mod .mod-carousel .slide-container .slide .img { width: 100%; height: auto; min-width: 100%; min-height: 100%; }
+.hero-mod .mod-carousel > .pagination-controls > button { background-color: #fff; border: 1px solid #fff; }
+.hero-mod .mod-carousel > .pagination-controls > button.active { background: #ccc !important; }
+@media only screen and (max-width: 576px) {
+ .hero-mod { padding: 12px 0 47px; }
+ .hero-mod .mod-carousel .slide-container .slide .img { width: auto; height: 100%; }
+}

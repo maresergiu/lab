@@ -4,12 +4,14 @@
 /* fonts
    ----- */
 /* sans-serif */
-@font-face { font-family: 'azo-regular'; src: url('../fonts/sans-serif/azo-regular.ttf') format('ttf'), url('../fonts/sans-serif/azo-regular.woff')  format('woff'); }
+@font-face { font-family: 'azo-regular'; src: url('fonts/sans-serif/azo-regular.ttf') format('ttf'), url('fonts/sans-serif/azo-regular.woff')  format('woff'); }
 
 /* serif */
-@font-face { font-family: 'proxima-light'; src: url('../fonts/serif/proximaNova-light.ttf') format('ttf'), url('../fonts/serif/proximaNova-light.woff')  format('woff'); }
-@font-face { font-family: 'proxima-regular'; src: url('../fonts/serif/proximaNova-regular.ttf') format('ttf'), url('../fonts/serif/proximaNova-regular.woff')  format('woff'); }     
-@font-face { font-family: 'proxima-semiBold'; src: url('../fonts/serif/proximaNova-semiBold.ttf') format('ttf'), url('../fonts/serif/proximaNova-semiBold.woff')  format('woff'); }
+/* proxima doesn't allow conversion to woff */
+@font-face { font-family: 'proxima-light'; src: url('fonts/serif/proximaNova-light.ttf') format('ttf'); }
+@font-face { font-family: 'proxima-regular'; src: url('fonts/serif/proximaNova-regular.ttf') format('ttf'); }     
+@font-face { font-family: 'proxima-semiBold'; src: url('fonts/serif/proximaNova-semiBold.ttf') format('ttf'); }
+@font-face { font-family: 'proxima-bold'; src: url('fonts/serif/proximaNova-bold.otf') format('otf'); }
 
 /* DOM tags */
 * { -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -19,9 +21,8 @@ html,
 body { padding: 0; margin: 0; font-family: 'proxima-regular', sans-serif; }
 body { font-size: 16px; font-size: 1.6rem; }
 
-:--headings { font-family: 'azo-regular', serif; }
 :--headings,
-p { padding: 0; margin: 0 0 20px 0; color: var(--first-color) }
+p { padding: 0; margin: 0 0 20px 0; }
 
 ul,
 ol { margin: 0; padding: 0; }
@@ -69,7 +70,8 @@ figure { display: block; }
 .mod.small.space { padding: 20px; }
 
 /* cta */
-.cta { border: none; background: transparent; outline: none; }
+.cta { border: none; background: transparent; outline: none; padding: 0; }
+.cta.action { background-color: var(--second-color); color: var(--sixth-color); padding: 10px 20px; font-family: 'proxima-semiBold', sans-serif; font-size: 26px; font-size: 2.6rem; }
 
 /* float */
 .left { float: left; }
@@ -81,11 +83,9 @@ figure { display: block; }
 .icon svg { width: 100%; height: auto; }
 
 /* text and titles */
-.title,
-.sub-title { font-size: 40px; font-size: 4rem; padding-left: 10px; }
-.sub-title { font-size: 25px; font-size: 2.5rem; }
-.sub-title.smp { padding-left: 0; }
+.title { font-size: 26px; font-size: 2.6rem; color: var(--second-color); }
 .text { font-size: 16px; font-size: 1.6rem; }
+
 .uppercase { text-transform: uppercase; }
 
 /* alignment */
