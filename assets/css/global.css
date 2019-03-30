@@ -86,6 +86,7 @@ figure { display: block; }
 .sub-title { font-size: 25px; font-size: 2.5rem; }
 .sub-title.smp { padding-left: 0; }
 .text { font-size: 16px; font-size: 1.6rem; }
+.uppercase { text-transform: uppercase; }
 
 /* alignment */
 .align-right { text-align: right; }
@@ -120,6 +121,7 @@ figure { display: block; }
    -------------- */
 /* header */
 #site-header { padding: 13px; background-color: var(--sixth-color);
+    .holder { max-width: 100%; }
     .logo {
         .icon { max-width: 118px; }
         .icon svg { max-height: 50px; }
@@ -130,6 +132,7 @@ figure { display: block; }
     .burger { display: none; }
     
     .nav { max-width: calc(100% - 120px); overflow: hidden; }
+    .nav .nav-holder { overflow: hidden; }
     .nav .nav-holder .nav-element { padding: 18px 15px; 
         .link { position: relative; }
         .link:after { content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background-color: var(--second-color); transform: scaleX(0); transition: var(--fast-transition); }
@@ -143,7 +146,7 @@ figure { display: block; }
    ------------- */
 /* tablet */
 @media only screen and (--tablet-viewport) {
-    #site-header { position: relative; padding: 0; z-index: 1;
+    #site-header { position: relative; padding: 0; z-index: 4;
         .logo { padding: 5px 0;
             .icon { max-width: 90px; }
         }        

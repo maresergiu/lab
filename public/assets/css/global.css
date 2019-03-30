@@ -55,6 +55,7 @@ header, section, footer, aside, nav, main, article, figure { display: block; }
 .sub-title { font-size: 25px; font-size: 2.5rem; }
 .sub-title.smp { padding-left: 0; }
 .text { font-size: 16px; font-size: 1.6rem; }
+.uppercase { text-transform: uppercase; }
 /* alignment */
 .align-right { text-align: right; }
 .align-left { text-align: left; }
@@ -80,12 +81,14 @@ header, section, footer, aside, nav, main, article, figure { display: block; }
    -------------- */
 /* header */
 #site-header { padding: 13px; background-color: #3b4b54; }
+#site-header .holder { max-width: 100%; }
 #site-header .logo .icon { max-width: 118px; }
 #site-header .logo .icon svg { max-height: 50px; }
 #site-header .logo .icon:hover svg { -webkit-transition: .3s; -o-transition: .3s; -moz-transition: .3s; transition: .3s; }
 #site-header .logo .icon:hover svg { opacity: .5; }
 #site-header .burger { display: none; }
 #site-header .nav { max-width: -webkit-calc( 100% - 120px ); max-width: -moz-calc( 100% - 120px ); max-width: calc( 100% - 120px ); overflow: hidden; }
+#site-header .nav .nav-holder { overflow: hidden; }
 #site-header .nav .nav-holder .nav-element { padding: 18px 15px; }
 #site-header .nav .nav-holder .nav-element .link { position: relative; }
 #site-header .nav .nav-holder .nav-element .link:after { content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background-color: #ff0; -webkit-transform: scaleX( 0 ); -moz-transform: scaleX( 0 ); -ms-transform: scaleX( 0 ); -o-transform: scaleX( 0 ); transform: scaleX( 0 ); -webkit-transition: .3s; -o-transition: .3s; -moz-transition: .3s; transition: .3s; }
@@ -96,7 +99,7 @@ header, section, footer, aside, nav, main, article, figure { display: block; }
    ------------- */
 /* tablet */
 @media only screen and (max-width: 992px) {
- #site-header { position: relative; padding: 0; z-index: 1; }
+ #site-header { position: relative; padding: 0; z-index: 4; }
  #site-header .logo { padding: 5px 0; }
  #site-header .logo .icon { max-width: 90px; }
  #site-header .burger { position: relative; display: inline-block; width: 53px; height: 53px; }

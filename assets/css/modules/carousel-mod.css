@@ -1,0 +1,4 @@
+.slide img { width: 100%; }
+.mod-carousel { height: 500px; }
+.mod-carousel > .pagination-controls > button { border: 1px solid white; }
+.mod-carousel > .pagination-controls > button.active { background: #ff0000 !important; }
