@@ -13,9 +13,12 @@ window.lab || (window.lab = {});
     var burgerTimer;
     lab.cache.$header.find('.burger').on('click', function () {
       var $thisBurger = $(this);
-      $thisBurger.parent().find('.nav-element').removeClass('anim');
       clearTimeout(burgerTimer);
       burgerTimer = setTimeout(function () {
+        if (!$thisBurger.hasClass('active')) {
+          $thisBurger.parent().find('.nav-element').removeClass('anim');
+        }
+
         $thisBurger.toggleClass('active');
 
         if ($thisBurger.hasClass('active')) {
