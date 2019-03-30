@@ -57,12 +57,14 @@ window.lab || (window.lab = {});
 		lab.cache.$footer = $('#site-footer');
 		lab.cache.$main = $('#main');
 
+		// identify browser
+		toolkit.client.domApply();
+
 		// if the height of the body is smaller then the page make the bodies height to strech to fit the screen 
 		lab.helpers.isContentScrolable();
 
 		// detect if js in enable
 		lab.cache.$html.toggleClass('no-js js');
-
 
 		// animate the elements that are in the viewport on load
 		lab.helpers.animateElemInView();

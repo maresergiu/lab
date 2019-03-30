@@ -1,0 +1,33 @@
+/* mod-carousel 4.2.6 */
+html { overflow-x: hidden; }
+.mod-carousel ul, .mod-carousel ol, .mod-carousel div { list-style: none; }
+.mod-carousel .viewport { width: 100%; height: 100%; z-index: 1; position: relative; overflow: hidden; float: left; }
+.mod-carousel[data-modes*=infinite] .viewport { overflow: visible; }
+.mod-carousel[data-modes*=infinite] .viewport .mask { z-index: 3; background: #222222; position: absolute; top: 0; left: 0; height: 100%; float: left; opacity: 0.7; filter: alpha(opacity=70); -moz-opacity: 0.7; -khtml-opacity: 0.7; }
+.mod-carousel .slide-container { position: relative; width: 99999px; float: left; height: 100%; background: #ffffff; }
+.mod-carousel .loader { position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 2; }
+
+/* slide */
+.mod-carousel .slide-container > div { display: block; position: relative; height: 100%; float: left; }
+
+/* fade */
+.mod-carousel[data-modes*=fade] .slide-container { width: 920px; }
+.mod-carousel[data-modes*=fade] .mask { display: none; }
+.mod-carousel[data-modes*=fade] .slide-container > div { position: absolute; display: none; z-index: 0; }
+.mod-carousel[data-modes*=fade] .slide-container > div:first-child { display: block; }
+
+/* controls */
+.mod-carousel > fieldset { border: none; padding: 0; }
+.mod-carousel > fieldset .step { display: none; width: 0; height: 0; padding: 0; background: none; }
+.mod-carousel > fieldset .step.prev,
+.mod-carousel > fieldset button.stop { z-index: 3; position: absolute; top: 50%; left: 10px; margin-top: -30px; cursor: pointer; border-top: 30px solid transparent; border-bottom: 30px solid transparent; border-right: 30px solid #2a2a2a; border-left: none; }
+.mod-carousel > fieldset .step.next,
+.mod-carousel > fieldset button.play { z-index: 3; position: absolute; top: 50%; right: 10px; margin-top: -30px; cursor: pointer; border-top: 30px solid transparent; border-bottom: 30px solid transparent; border-left: 30px solid #2a2a2a; border-right: none; }
+.mod-carousel > fieldset button.playback { display: none; width: 0; height: 0; padding: 0; background: none; width: 30px; height: 60px; top: auto; bottom: 10%; }
+.mod-carousel > fieldset button.stop { left: 45%; border: none; border-left: 10px solid #2a2a2a; border-right: 10px solid #2a2a2a; }
+.mod-carousel > fieldset button.play { right: 45%; }
+.mod-carousel > .pagination-controls { z-index: 3; position: absolute; left: 50%; bottom: 5px; padding: 15px; }
+.mod-carousel > .pagination-controls > button { cursor: pointer; float: left; margin-left: 5px; width: 12px; height: 12px; padding: 0; border-radius: 10px; background: #222; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+.mod-carousel > .pagination-controls > button.active { background: #444444; }
+.mod-carousel > .pagination-controls > button:first-child { margin-left: 0; }
+.mod-carousel > .pagination-controls > button:hover { background: #666666; }

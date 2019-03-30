@@ -49,7 +49,9 @@ window.lab || (window.lab = {});
 
     lab.cache.$header = $('#site-header');
     lab.cache.$footer = $('#site-footer');
-    lab.cache.$main = $('#main'); // if the height of the body is smaller then the page make the bodies height to strech to fit the screen 
+    lab.cache.$main = $('#main'); // identify browser
+
+    toolkit.client.domApply(); // if the height of the body is smaller then the page make the bodies height to strech to fit the screen 
 
     lab.helpers.isContentScrolable(); // detect if js in enable
 
