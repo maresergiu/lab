@@ -16,7 +16,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- styleshets -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/libs/normalise.min.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
 
     <!-- jquery -->
     <script src="assets/scripts/libs/jquery.3.3.1.min.js"></script>
@@ -27,8 +28,8 @@
     <h1 class="hidden-accessibility">Lab Agency</h1>
     <header id="site-header">
         <h2 class="hidden-accessibility">Header</h2>
-        <div class="holder">
-            <div class="logo-holder">
+        <div class="holder cf">
+            <div class="logo left">
                 <a class="cta icon" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.5 51.5" width="120.5" height="51.5">
                         <path fill="#f1e407"
@@ -36,22 +37,27 @@
                     </svg>
                 </a>
             </div>
-            <nav class="nav">
+            <button class="cta burger right" type="button">
+                <span class="line inline-bl"></span>
+                <span class="line inline-bl"></span>
+                <span class="line inline-bl"></span>
+            </button>
+            <nav class="nav right">
                 <ul class="nav-holder">
-                    <li>
-                        <a href="" href="#">Our work</a>
+                    <li class="nav-element anim-mod" data-delay="300" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link" href="#">Our work</a>
                     </li>
-                    <li>
-                        <a href="" href="#">Our approach</a>
+                    <li class="nav-element anim-mod" data-delay="450" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link" href="#">Our approach</a>
                     </li>
-                    <li>
-                        <a href="" href="#">Secret Sauce</a>
+                    <li class="nav-element anim-mod" data-delay="600" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link" href="#">Secret Sauce</a>
                     </li>
-                    <li>
-                        <a href="" href="#">Insight</a>
+                    <li class="nav-element anim-mod" data-delay="750" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link" href="#">Insight</a>
                     </li>
-                    <li>
-                        <a href="" href="#">Careers</a>
+                    <li class="nav-element anim-mod" data-delay="900" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link" href="#">Careers</a>
                     </li>
                 </ul>
             </nav>

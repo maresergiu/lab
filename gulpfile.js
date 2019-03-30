@@ -21,7 +21,6 @@ const gulp = require('gulp'),
     helpers: 'assets/css/helpers.css',
     destination: 'public/assets/css',
     modifyThisFiles: [
-      'assets/css/libs/*.css',
       'assets/css/global.css',
       'assets/css/modules/*.css'
     ]
@@ -74,11 +73,6 @@ function postCss() {
           cascade: false
         })
       )
-      .pipe(concat('style.css'))
-      .pipe(uglifycss({
-        'maxLineLen': 80,
-        'uglyComments': true
-      }))
       .pipe(gulp.dest(cssFile.destination));
 
     resolve();
@@ -107,6 +101,7 @@ gulp.task('babelJs', babelJsFunc);
 function watchForChanges() {
   return new Promise(function (resolve, reject) {
     gulp.watch(cssFile.modifyThisFiles, gulp.series(postCss));
+    gulp.watch(jsFile.modifyThisFiles, gulp.series(babelJsFunc));
 
     resolve();
   });

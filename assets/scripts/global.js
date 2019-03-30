@@ -8,6 +8,28 @@
 window.lab || (window.lab = {});
 
 (function ($) {
+	function siteHeaderMod() {
+		let burgerTimer;
+
+		lab.cache.$header.find('.burger').on('click', function () {
+			let $thisBurger = $(this);
+
+			clearTimeout(burgerTimer);
+			burgerTimer = setTimeout(() => {
+				if (!$thisBurger.hasClass('active')) {
+					$thisBurger.parent().find('.nav-element').removeClass('anim');
+				}
+
+				$thisBurger.toggleClass('active');
+
+				if ($thisBurger.hasClass('active')) {
+					lab.helpers.animateElemInView();
+				}
+
+			}, lab.cache.timer.fast);
+		});
+	}
+
 	$(document).ready(function () {
 
 		$.extend(true, lab, {
@@ -45,6 +67,10 @@ window.lab || (window.lab = {});
 		// animate the elements that are in the viewport on load
 		lab.helpers.animateElemInView();
 
+		// global modules
+		if (lab.cache.$header.length) {
+			siteHeaderMod();
+		}
 
 		// window events
 		// -------------
