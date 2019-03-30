@@ -9,6 +9,22 @@
 window.lab || (window.lab = {});
 
 (function ($) {
+  function siteHeaderMod() {
+    var burgerTimer;
+    lab.cache.$header.find('.burger').on('click', function () {
+      var $thisBurger = $(this);
+      $thisBurger.parent().find('.nav-element').removeClass('anim');
+      clearTimeout(burgerTimer);
+      burgerTimer = setTimeout(function () {
+        $thisBurger.toggleClass('active');
+
+        if ($thisBurger.hasClass('active')) {
+          lab.helpers.animateElemInView();
+        }
+      }, lab.cache.timer.fast);
+    });
+  }
+
   $(document).ready(function () {
     $.extend(true, lab, {
       cache: toolkit.cache,
@@ -36,9 +52,14 @@ window.lab || (window.lab = {});
 
     lab.cache.$html.toggleClass('no-js js'); // animate the elements that are in the viewport on load
 
-    lab.helpers.animateElemInView(); // window events
+    lab.helpers.animateElemInView(); // global modules
+
+    if (lab.cache.$header.length) {
+      siteHeaderMod();
+    } // window events
     // -------------
     // avoiding the momentum scrolling on mobile and trigger animations
+
 
     if (lab.helpers.deviceWithTouch()) {
       lab.cache.$window.on({

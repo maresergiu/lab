@@ -160,11 +160,12 @@ lab.helpers = {
     },
     // animate de elements when entering the viewport
     animateElemInView: function () {
-        var $animElem = lab.cache.$main.find('.anim-mod');
+        var $animElem = lab.cache.$body.find('.anim-mod');
 
         $animElem.each(function () {
             var $thisAnimElem = $(this),
                 elemIsInView = lab.helpers.elemIsInView($thisAnimElem),
+                dataDelay = $thisAnimElem.data('delay'),
                 parentDelay;
 
             function animSubElem($thisAnimElem) {
@@ -180,7 +181,7 @@ lab.helpers = {
 
             // when there are synchronous animations on the same line
             if (elemIsInView && $thisAnimElem.data('sync')) {
-                parentDelay = elemIsInView && (lab.cache.$window.width() > lab.config.breakpoints.SMALL_WIDTH) ? $thisAnimElem.data('delay') : 300;
+                parentDelay = dataDelay ? dataDelay : 300;
 
                 // trigger parent animation
                 setTimeout(function () {
