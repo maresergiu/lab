@@ -56,15 +56,9 @@ header, section, footer, aside, nav, main, article, figure { display: block; }
 .title { font-size: 26px; font-size: 2.6rem; color: #ff0; }
 .text { font-size: 16px; font-size: 1.6rem; }
 .uppercase { text-transform: uppercase; }
-/* alignment */
-.align-right { text-align: right; }
-.align-left { text-align: left; }
-.align-center { text-align: center; }
-.space-between { -webkit-box-pack: justify; -webkit-justify-content: space-between; -moz-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 /* accessibility */
 .hidden-accessibility { display: none; }
 .hidden-ui { position: absolute; left: 9999px; }
-.disable-field { opacity: .5; }
 /* form validation */
 .form-field, .form-section-errors { margin-bottom: 30px; }
 .error .err-msgs { color: #a94442; }

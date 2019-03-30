@@ -88,16 +88,9 @@ figure { display: block; }
 
 .uppercase { text-transform: uppercase; }
 
-/* alignment */
-.align-right { text-align: right; }
-.align-left { text-align: left; }
-.align-center { text-align: center; }
-.space-between { justify-content: space-between; }
-
 /* accessibility */
 .hidden-accessibility { display: none; }
 .hidden-ui { position: absolute; left: 9999px; }
-.disable-field { opacity: 0.5; }
 
 /* form validation */
 .form-field,

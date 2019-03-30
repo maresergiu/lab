@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('.mod-carousel').modCarousel({
+    // the carousel from the hero module
+    lab.cache.$main.find('.hero-mod').children('.mod-carousel').modCarousel({
         modes: {
             slide: true,				// slide or fade mode
             infinite: true,				// slide infinitely
@@ -33,15 +34,6 @@ $(document).ready(function () {
             visibleClassAfter: true,	// add visible class in DOM after the rotation has finished
             maskedOverflow: false,		// add masked overflow either side of the carousel
             touchControl: true			// allow touch controls
-
-        },
-        onReady: function (d) { // load event
-
-        },
-        onRotateStart: function (d) { // start rotation
-
-        },
-        onRotateEnd: function (d) {	// end rotation
 
         }
     });

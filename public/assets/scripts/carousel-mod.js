@@ -1,7 +1,8 @@
 "use strict";
 
 $(document).ready(function () {
-  $('.mod-carousel').modCarousel({
+  // the carousel from the hero module
+  lab.cache.$main.find('.hero-mod').children('.mod-carousel').modCarousel({
     modes: {
       slide: true,
       // slide or fade mode
@@ -58,12 +59,6 @@ $(document).ready(function () {
       // add masked overflow either side of the carousel
       touchControl: true // allow touch controls
 
-    },
-    onReady: function onReady(d) {// load event
-    },
-    onRotateStart: function onRotateStart(d) {// start rotation
-    },
-    onRotateEnd: function onRotateEnd(d) {// end rotation
     }
   });
 });
