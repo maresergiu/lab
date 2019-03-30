@@ -9,7 +9,7 @@ window.lab || (window.lab = {});
 
 (function ($) {
 	function siteHeaderMod() {
-		let burgerTimer;
+		var burgerTimer;
 
 		lab.cache.$header.find('.burger').on('click', function () {
 			let $thisBurger = $(this);
