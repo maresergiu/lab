@@ -1,13 +1,20 @@
 /* variables */
 :root {
     /* colors */
-    --first-color: #00457c;   
+    --first-color: #ffffff;
+    --second-color: #ffff00;
+    --third-color: #a94442;
+    --fourth-color: #000000;
+    --fifth-color: #cccccc;
+    --sixth-color: #3b4b54;
+
+    /* time frame */
+    --fast-transition: 0.3s;
 }
 
 /* media queries */
-@custom-media --medium-viewport (max-width: 1024px);
-@custom-media --small-viewport (max-width: 768px);
-@custom-media --very-small-viewport (max-width: 420px);
+@custom-media --tablet-viewport (max-width: 992px);
+@custom-media --mobile-viewport (max-width: 576px);
 
 /* custom selectors */
 @custom-selector :--headings h1, h2, h3, h4, h5, h6;

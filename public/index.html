@@ -6,90 +6,222 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
+    <!-- fav icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/icons/fav-icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/media/icons/fav-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/media/icons/fav-icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/media/icons/fav-icons/site.webmanifest">
+    <link rel="mask-icon" href="assets/media/icons/fav-icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- styleshets -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/libs/normalise.min.css" />
+    <link rel="stylesheet" href="assets/css/libs/mod-carousel.core.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
 
     <!-- jquery -->
     <script src="assets/scripts/libs/jquery.3.3.1.min.js"></script>
+    <script src="assets/scripts/libs/toolkit.min.js"></script>
 </head>
 
 <body>
-    <h1 class="hidden-accessibility">Asset map detailer</h1>
+    <h1 class="hidden-accessibility">Lab Agency</h1>
     <header id="site-header">
         <h2 class="hidden-accessibility">Header</h2>
         <div class="holder cf">
-            <a class="left inline-bl" href="index.html">AMD</a>
-            <nav class="inline-bl right nav">
-                <h3 class="hidden">Navigation</h3>
-                <ul class="nav-holder">
-                    <li class="nav-element">
-                        <a href="#home">Home</a>
+            <div class="logo left">
+                <a class="cta icon" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.5 51.5" width="120.5" height="51.5">
+                        <path fill="#f1e407"
+                            d="M1.883 7.869h2.872v39.852h20.836v2.729H1.883zM57.222 11.213L41.944 50.449h-3.228L55.572 7.914h3.587L75.8 50.449h-3.3zM110.686 31.587c-1.483-1.96-3.324-3.131-5.523-3.515 1.673-.287 3.036-1.386 4.088-3.299 1.1-1.912 1.65-4.184 1.65-6.814 0-2.773-.909-5.179-2.726-7.187-1.864-1.961-4.088-2.956-6.671-2.956H84.045v3.104h16.886c1.96 0 3.633.579 5.021 2.013 1.386 1.435 2.08 3.087 2.08 5.095 0 2.487-.694 4.614-2.08 6.383-1.388 1.769-3.061 2.652-5.021 2.652H84.045v2.691h16.886c2.485 0 4.614.809 6.383 2.53 1.769 1.675 2.655 3.704 2.655 6.143 0 2.535-.886 4.75-2.655 6.567-1.769 1.818-3.898 2.765-6.383 2.765H94.6v2.69h6.904c3.108 0 5.786-1.205 8.034-3.549 2.199-2.342 3.3-5.182 3.3-8.481 0-2.582-.717-4.871-2.152-6.832M119.192 4.682c0 .484-.085.924-.256 1.322a3.073 3.073 0 0 1-1.702 1.676 3.167 3.167 0 0 1-1.206.234c-.466 0-.894-.082-1.282-.247a3.013 3.013 0 0 1-1.003-.678 3.12 3.12 0 0 1-.657-1.024 3.397 3.397 0 0 1-.237-1.283c0-.484.084-.925.254-1.323.171-.397.401-.737.692-1.019s.629-.502 1.015-.657a3.22 3.22 0 0 1 1.218-.233 3.166 3.166 0 0 1 2.217.89c.291.282.522.622.691 1.019.171.398.256.839.256 1.323m-.692 0c0-.392-.063-.752-.19-1.08a2.546 2.546 0 0 0-.527-.847 2.38 2.38 0 0 0-1.755-.744c-.351 0-.678.065-.98.195a2.37 2.37 0 0 0-.791.549 2.53 2.53 0 0 0-.527.847c-.127.328-.19.688-.19 1.08 0 .368.057.714.173 1.037.115.323.281.605.497.847.215.242.477.434.782.574.305.142.651.212 1.036.212.346 0 .669-.065.969-.194.299-.13.561-.313.786-.549.224-.236.4-.517.527-.842.127-.326.19-.688.19-1.085m-3.111 1.848h-.587V2.953h1.356c.432 0 .758.081.976.242.22.161.329.424.329.787 0 .322-.089.559-.268.708-.179.15-.4.24-.665.268l1.003 1.573h-.666l-.925-1.53h-.553V6.53zm.657-2.031c.109 0 .214-.004.315-.013.101-.008.189-.033.264-.073s.135-.097.181-.169a.56.56 0 0 0 .07-.307.41.41 0 0 0-.26-.406.779.779 0 0 0-.25-.065 3.106 3.106 0 0 0-.268-.012h-.709v1.045h.657z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="cta burger right" type="button">
+                <span class="line inline-bl"></span>
+                <span class="line inline-bl"></span>
+                <span class="line inline-bl"></span>
+            </button>
+            <nav class="nav right">
+                <h2 class="hidden-accessibility">Website navigation</h2>
+                <ul class="nav-holder cf">
+                    <li class="nav-element anim-mod right" data-delay="900" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link uppercase" href="#">Careers</a>
                     </li>
-                    <li class="nav-element">
-                        <a href="#map">Map</a>
+                    <li class="nav-element anim-mod right" data-delay="750" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link uppercase" href="#">Insight</a>
+                    </li>
+                    <li class="nav-element anim-mod right" data-delay="600" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link uppercase" href="#">Secret Sauce</a>
+                    </li>
+                    <li class="nav-element anim-mod right" data-delay="450" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link uppercase" href="#">Our approach</a>
+                    </li>
+                    <li class="nav-element anim-mod right" data-delay="300" data-sync="true" data-sub-anim-mod="false">
+                        <a class="link uppercase" href="#">Our work</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
     <div id="main">
-        <h2 class="hidden-accessibility">Main</h2>
-        <section>
-            <h3 class="hidden-accessibility">Hero</h3>
+        <section class="hero-mod">
+            <h2 class="hidden-accessibility">Hero</h2>
+            <div class="holder">
+                <div class="rich-text-mod anim-mod" data-delay="300" data-sync="false" data-sub-anim-mod="false">
+                    <h3 class="title">Title</h3>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <button class="cta uppercase action full-width" type="button">Text Link</button>
+                </div>
+            </div>
+            <div class="mod-carousel">
+                <fieldset aria-label="Carousel buttons" aria-controls="carousel">
+                    <!--Playback buttons - keep hidden (if necessary) but present for accessibility-->
+                    <button class="playback stop" data-playback="stop" aria-label="Pause slideshow"
+                        tabindex="0"></button>
+                    <button class="playback play" data-playback="play" aria-label="Play slideshow"
+                        tabindex="0"></button>
+                    <button class="step next" data-direction="right" tabindex="0" aria-label="Next slide"></button>
+                    <button class="step prev" data-direction="left" tabindex="0" aria-label="Previous slide"></button>
+                </fieldset>
+                <span class="loader"></span>
+                <fieldset role="tablist" aria-label="Carousel slides" aria-controls="carousel"
+                    class="pagination-controls"></fieldset>
+                <div class="viewport">
+                    <div class="slide-container" aria-live="polite">
+                        <!-- slides in here -->
+                        <div class="slide" role="tabpanel">
+                            <img class="img" srcset=" assets/media/images/person-desktop.jpg 1200w, 
+                                          assets/media/images/person-tablet.jpg 992w, 
+                                          assets/media/images/person-mobile.jpg 576w"
+                                src="assets/media/images/person-desktop.jpg" alt="person" />
+                        </div>
+                        <div class="slide" role="tabpanel">
+                            <img class="img" srcset=" assets/media/images/party-desktop.jpg 1200w, 
+                                          assets/media/images/party-tablet.jpg 992w, 
+                                          assets/media/images/party-mobile.jpg 576w"
+                                src="assets/media/images/party-desktop.jpg" alt="party" />
+                        </div>
+                        <div class="slide" role="tabpanel">
+                            <img class="img" srcset=" assets/media/images/colors-desktop.jpg 1200w, 
+                                          assets/media/images/colors-tablet.jpg 992w, 
+                                          assets/media/images/colors-mobile.jpg 576w"
+                                src="assets/media/images/colors-desktop.jpg" alt="color" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="mapp-app">
-            <h3 class="hidden-accessibility">Map app</h3>
+        <section class="abilities-mod mod">
+            <h2 class="hidden-accessibility">Abilities</h2>
+            <div class="holder">
+                <ul class="list cf">
+                    <li class="list-element left anim-mod" data-mobile-reset="true" data-delay="300" data-sync="true"
+                        data-sub-anim-mod="false">
+                        <figure class="img-holder">
+                            <img class="img" srcset=" assets/media/images/multitask-desktop.jpg 1200w, 
+                                                      assets/media/images/multitask-tablet.jpg 992w, 
+                                                      assets/media/images/multitask-mobile.jpg 576w"
+                                src="assets/media/images/multitask-desktop.jpg" alt="multitask" />
+                        </figure>
+                        <p class="text">Gigital strategy</p>
+                    </li>
+                    <li class="list-element left anim-mod" data-mobile-reset="true" data-delay="450" data-sync="true"
+                        data-sub-anim-mod="false">
+                        <figure class="img-holder">
+                            <img class="img" srcset=" assets/media/images/kiss-desktop.jpg 1200w, 
+                                                      assets/media/images/kiss-tablet.jpg 992w, 
+                                                      assets/media/images/kiss-mobile.jpg 576w"
+                                src="assets/media/images/kiss-desktop.jpg" alt="kiss" />
+                        </figure>
+                        <p class="text">Design</p>
+                    </li>
+                    <li class="list-element left anim-mod" data-mobile-reset="true" data-delay="600" data-sync="true"
+                        data-sub-anim-mod="false">
+                        <figure class="img-holder">
+                            <img class="img" srcset=" assets/media/images/code-desktop.jpg 1200w, 
+                                                      assets/media/images/code-tablet.jpg 992w, 
+                                                      assets/media/images/code-mobile.jpg 576w"
+                                src="assets/media/images/code-desktop.jpg" alt="code" />
+                        </figure>
+                        <p class="text">Development</p>
+                    </li>
+                    <li class="list-element left anim-mod" data-mobile-reset="true" data-delay="750" data-sync="true"
+                        data-sub-anim-mod="false">
+                        <figure class="img-holder">
+                            <img class="img" srcset=" assets/media/images/laptop-desktop.jpg 1200w, 
+                                                      assets/media/images/laptop-tablet.jpg 992w, 
+                                                      assets/media/images/laptop-mobile.jpg 576w"
+                                src="assets/media/images/laptop-desktop.jpg" alt="laptop" />
+                        </figure>
+                        <p class="text">Performance Marketing</p>
+                    </li>
+                    <li class="list-element left anim-mod" data-mobile-reset="true" data-delay="900" data-sync="true"
+                        data-sub-anim-mod="false">
+                        <figure class="img-holder">
+                            <img class="img" srcset=" assets/media/images/cell-desktop.jpg 1200w, 
+                                                      assets/media/images/cell-tablet.jpg 992w, 
+                                                      assets/media/images/cell-mobile.jpg 576w"
+                                src="assets/media/images/cell-desktop.jpg" alt="cell" />
+                        </figure>
+                        <p class="text">Neuro Linguistic Search</p>
+                    </li>
+                    <li class="list-element left anim-mod" data-mobile-reset="true" data-delay="1050" data-sync="true"
+                        data-sub-anim-mod="false">
+                        <figure class="img-holder">
+                            <img class="img" srcset=" assets/media/images/rave-desktop.jpg 1200w, 
+                                                      assets/media/images/rave-tablet.jpg 992w, 
+                                                      assets/media/images/rave-mobile.jpg 576w"
+                                src="assets/media/images/rave-desktop.jpg" alt="rave" />
+                        </figure>
+                        <p class="text">Neuromarketing</p>
+                    </li>
+                    <li class="list-element left anim-mod" data-mobile-reset="true" data-delay="1200" data-sync="true"
+                        data-sub-anim-mod="false">
+                        <figure class="img-holder">
+                            <img class="img" srcset=" assets/media/images/camera-desktop.jpg 1200w, 
+                                                      assets/media/images/camera-tablet.jpg 992w, 
+                                                      assets/media/images/camera-mobile.jpg 576w"
+                                src="assets/media/images/camera-desktop.jpg" alt="camera" />
+                        </figure>
+                        <p class="text">Video</p>
+                    </li>
+                    <li class="list-element left anim-mod" data-mobile-reset="true" data-delay="1350" data-sync="true"
+                        data-sub-anim-mod="false">
+                        <figure class="img-holder">
+                            <img class="img" srcset=" assets/media/images/lines-desktop.jpg 1200w, 
+                                                      assets/media/images/lines-tablet.jpg 992w, 
+                                                      assets/media/images/lines-mobile.jpg 576w"
+                                src="assets/media/images/lines-desktop.jpg" alt="lines" />
+                        </figure>
+                        <p class="text">Analysis & Improvement</p>
+                    </li>
+                </ul>
+            </div>
         </section>
     </div>
     <footer id="site-footer">
         <h2 class="hidden-accessibility">Footer</h2>
     </footer>
-    <!-- loader -->
-    <div class="loader-mod">
-        <div class="loader-holder icon">
-            <div class="loader">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 512 512">
-                    <path
-                        d="M256.001 0c-8.284 0-15 6.716-15 15v96.4c0 8.284 6.716 15 15 15s15-6.716 15-15V15c0-8.284-6.716-15-15-15z"
-                        fill="rgb(14, 89, 147, 0.1)" />
-                    <path
-                        d="M256.001 385.601c-8.284 0-15 6.716-15 15V497c0 8.284 6.716 15 15 15s15-6.716 15-15v-96.399c0-8.285-6.716-15-15-15z"
-                        fill="rgb(14, 89, 147, 0.6)" />
-                    <path
-                        d="M196.691 123.272l-48.2-83.485c-4.142-7.175-13.316-9.633-20.49-5.49-7.174 4.142-9.632 13.316-5.49 20.49l48.2 83.485c2.778 4.813 7.82 7.502 13.004 7.502 2.545 0 5.124-.648 7.486-2.012 7.174-4.142 9.632-13.316 5.49-20.49z"
-                        fill="rgb(14, 89, 147, 0.025)" />
-                    <path
-                        d="M389.491 457.212l-48.199-83.483c-4.142-7.175-13.316-9.633-20.49-5.49-7.174 4.142-9.632 13.316-5.49 20.49l48.199 83.483c2.778 4.813 7.82 7.502 13.004 7.502 2.545 0 5.124-.648 7.486-2.012 7.174-4.142 9.632-13.316 5.49-20.49z"
-                        fill="rgb(14, 89, 147, 0.5)" />
-                    <path
-                        d="M138.274 170.711L54.788 122.51c-7.176-4.144-16.348-1.685-20.49 5.49-4.142 7.174-1.684 16.348 5.49 20.49l83.486 48.202a14.928 14.928 0 0 0 7.486 2.012c5.184 0 10.226-2.69 13.004-7.503 4.142-7.174 1.684-16.348-5.49-20.49z"
-                        fill="rgb(14, 89, 147, 1)" />
-                    <path
-                        d="M472.213 363.51l-83.484-48.199c-7.176-4.142-16.349-1.684-20.49 5.491-4.142 7.175-1.684 16.349 5.49 20.49l83.484 48.199a14.93 14.93 0 0 0 7.486 2.012c5.184 0 10.227-2.69 13.004-7.502 4.142-7.176 1.684-16.35-5.49-20.491z"
-                        fill="rgb(14, 89, 147, 0.4)" />
-                    <path
-                        d="M111.401 241.002H15c-8.284 0-15 6.716-15 15s6.716 15 15 15h96.401c8.284 0 15-6.716 15-15s-6.716-15-15-15z"
-                        fill="rgb(14, 89, 147, 0.9)" />
-                    <path
-                        d="M497 241.002h-96.398c-8.284 0-15 6.716-15 15s6.716 15 15 15H497c8.284 0 15-6.716 15-15s-6.716-15-15-15z"
-                        fill="rgb(14, 89, 147, 0.3)" />
-                    <path
-                        d="M143.765 320.802c-4.142-7.175-13.314-9.633-20.49-5.49l-83.486 48.2c-7.174 4.142-9.632 13.316-5.49 20.49 2.778 4.813 7.82 7.502 13.004 7.502 2.545 0 5.124-.648 7.486-2.012l83.486-48.2c7.174-4.142 9.632-13.316 5.49-20.49z"
-                        fill="rgb(14, 89, 147, 0.8)" />
-                    <path
-                        d="M477.702 128.003c-4.142-7.175-13.315-9.632-20.49-5.49l-83.484 48.2c-7.174 4.141-9.632 13.315-5.49 20.489 2.778 4.813 7.82 7.503 13.004 7.503a14.93 14.93 0 0 0 7.486-2.012l83.484-48.2c7.174-4.142 9.632-13.316 5.49-20.49z"
-                        fill="rgb(14, 89, 147, 0.2)" />
-                    <path
-                        d="M191.201 368.239c-7.174-4.144-16.349-1.685-20.49 5.49l-48.2 83.485c-4.142 7.174-1.684 16.348 5.49 20.49a14.928 14.928 0 0 0 7.486 2.012c5.184 0 10.227-2.69 13.004-7.502l48.2-83.485c4.142-7.174 1.684-16.348-5.49-20.49z"
-                        fill="rgb(14, 89, 147, 0.7)" />
-                    <path
-                        d="M384.001 34.3c-7.175-4.144-16.349-1.685-20.49 5.49l-48.199 83.483c-4.143 7.174-1.685 16.348 5.49 20.49a14.928 14.928 0 0 0 7.486 2.012c5.184 0 10.226-2.69 13.004-7.502l48.199-83.483c4.142-7.174 1.684-16.348-5.49-20.49z"
-                        fill="rgb(14, 89, 147, 0.1)" /></svg>
-            </div>
-        </div>
-    </div>
+
+    <!-- modules style sheets -->
+    <link rel="stylesheet" href="assets/css/hero-mod.css" />
+    <link rel="stylesheet" href="assets/css/rich-text-mod.css" />
+    <link rel="stylesheet" href="assets/css/abilities-mod.css" />
+
     <!-- scripts -->
-    <script src="assets/scripts/script.bundle.js"></script>
+    <script src="assets/scripts/global.js"></script>
+    <script src="assets/scripts/helpers.js"></script>
+    <script src="assets/scripts/libs/mod-carousel.min.js"></script>
+
+    <!-- modules -->
+    <script src="assets/scripts/carousel-mod.js"></script>
 </body>
 
 </html>

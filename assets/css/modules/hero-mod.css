@@ -1,0 +1,16 @@
+.hero-mod { position: relative; padding: 60px 0; z-index: 0; overflow: hidden;
+    .rich-text-mod { position: relative; max-width: 426px; z-index: 2; }
+
+    .mod-carousel { position: absolute; top: 0; left: 0; height: 100%;  width: 100%; z-index: 1; 
+        .slide-container { position: absolute; top: 0; left: 0; overflow: hidden; }
+        .slide-container .slide .img { width: 100%; height: auto; min-width: 100%; min-height: 100%; }
+    }
+    .mod-carousel > .pagination-controls > button { background-color: var(--first-color); border: 1px solid var(--first-color); }
+    .mod-carousel > .pagination-controls > button.active { background: var(--fifth-color) !important; }        
+}
+
+@media only screen and (--mobile-viewport) {
+    .hero-mod { padding: 12px 0 47px; 
+        .mod-carousel .slide-container .slide .img { width: auto; height: 100%; }
+    }
+}
