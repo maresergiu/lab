@@ -176,7 +176,12 @@ lab.helpers = {
 
 
       if (elemIsInView && $thisAnimElem.data('sync')) {
-        parentDelay = dataDelay ? dataDelay : 300; // trigger parent animation
+        parentDelay = dataDelay ? dataDelay : 300;
+
+        if ($thisAnimElem.data('mobile-reset') && toolkit.cache.$window.width() < lab.config.breakpoints.MOBILE_WIDTH) {
+          parentDelay = 300;
+        } // trigger parent animation
+
 
         setTimeout(function () {
           $thisAnimElem.addClass('anim');
