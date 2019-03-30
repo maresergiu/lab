@@ -36,9 +36,8 @@ window.lab || (window.lab = {});
     }); // custom config
 
     lab.config.breakpoints = {
-      MEDIUM_WIDTH: 1200,
-      X_MEDIUM_WIDTH: 1024,
-      SMALL_WIDTH: 768 // custom delays
+      TABLET_WIDTH: 992,
+      MOBILE_WIDTH: 576 // custom delays
 
     };
     lab.cache.timer = {

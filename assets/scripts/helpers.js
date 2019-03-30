@@ -181,7 +181,7 @@ lab.helpers = {
 
             // when there are synchronous animations on the same line
             if (elemIsInView && $thisAnimElem.data('sync')) {
-                parentDelay = dataDelay ? dataDelay : 300;
+                parentDelay = dataDelay && ($thisAnimElem.data('mobile-reset') && toolkit.cache.$window.width() < lab.config.breakpoints.MOBILE_WIDTH) ? 300 : dataDelay;
 
                 // trigger parent animation
                 setTimeout(function () {
