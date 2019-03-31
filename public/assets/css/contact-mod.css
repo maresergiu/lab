@@ -31,6 +31,7 @@
 .contact-mod .form-holder .stylish-form .stylish-select > .dropdown-list { border: 2px solid #ff0; }
 .contact-mod .form-holder .cta-holder { padding-top: 30px; }
 .contact-mod .form-holder .cta-holder.anim { -webkit-animation: lab-global-slideUp-smooth .3s; -moz-animation: lab-global-slideUp-smooth .3s; -o-animation: lab-global-slideUp-smooth .3s; animation: lab-global-slideUp-smooth .3s; }
+.ie .contact-mod .slider input { padding: 0; }
 @media only screen and (max-width: 992px) {
  .contact-mod { padding: 40px 0; }
  .contact-mod .metter-holder, .contact-mod .form-holder { float: none; display: block; width: 100%; max-width: 592px; margin: 40px auto 0; }

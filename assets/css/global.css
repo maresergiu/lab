@@ -3,15 +3,13 @@
 
 /* fonts
    ----- */
-/* sans-serif */
-@font-face { font-family: 'azo-regular'; src: url('fonts/sans-serif/azo-regular.ttf') format('ttf'), url('fonts/sans-serif/azo-regular.woff')  format('woff'); }
-
 /* serif */
-/* proxima doesn't allow conversion to woff */
-@font-face { font-family: 'proxima-light'; src: url('fonts/serif/proximaNova-light.ttf') format('ttf'); }
-@font-face { font-family: 'proxima-regular'; src: url('fonts/serif/proximaNova-regular.ttf') format('ttf'); }     
-@font-face { font-family: 'proxima-semiBold'; src: url('fonts/serif/proximaNova-semiBold.ttf') format('ttf'); }
-@font-face { font-family: 'proxima-bold'; src: url('fonts/serif/proximaNova-bold.otf') format('otf'); }
+@font-face { font-family: 'azo-regular'; src: url('../fonts/serif/azo-regular.ttf') format('truetype'), url('../fonts/serif/azo-regular.woff')  format('woff'); }
+
+/* sans-serif */
+@font-face { font-family: 'proxima-light'; src: url('../fonts/sans-serif/proximaNova-light.ttf') format('truetype'), url('../fonts/sans-serif/proximaNova-light.woff') format('woff'); }
+@font-face { font-family: 'proxima-regular'; src: url('../fonts/sans-serif/proximaNova-regular.ttf') format('truetype'), url('../fonts/sans-serif/proximaNova-regular.woff') format('woff'); }
+@font-face { font-family: 'proxima-semiBold'; src: url('../fonts/sans-serif/proximaNova-semiBold.ttf') format('truetype'), url('../fonts/sans-serif/proximaNova-semiBold.woff') format('woff'); }
 
 /* DOM tags */
 * { -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -137,7 +135,7 @@ input[type=range]:focus::-ms-fill-upper { background: var(--sixth-color); }
 /* global modules
    -------------- */
 /* header */
-#site-header { position: absolute; top: 0; left: 0; width: 100%; height: auto; padding: 13px; background-color: var(--sixth-color); z-index: 1;
+#site-header { position: absolute; top: 0; left: 0; width: 100%; height: auto; padding: 13px; background-color: var(--sixth-color); z-index: 5;
     .holder { max-width: 100%; }
     .logo {
         .icon { max-width: 118px; }
@@ -158,7 +156,7 @@ input[type=range]:focus::-ms-fill-upper { background: var(--sixth-color); }
     }
     .nav .nav-holder .nav-element.anim { animation: lab-global-slideUp-smooth var(--fast-transition); }            
 }
-#site-header.fixed { position: fixed; top: 0; left: 0; transform: translateY(-100%); }
+#site-header.fixed { position: fixed; top: 0; left: 0; transform: translateY(-100%); box-shadow: 0px 0px 10px 4px var(--sixth-color); }
 #site-header.fixed.slide { transform: translateY(0); transition: var(--fast-transition); }
 
 #site-footer { position: relative; overflow: hidden; background-color: var(--sixth-color); text-align: center; padding: 44px 0 25px;

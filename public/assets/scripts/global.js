@@ -48,6 +48,9 @@ window.lab || (window.lab = {});
         'scroll': function scroll() {
           lab.helpers.animateElemInView();
           lab.helpers.fixedHeader();
+        },
+        'load': function load() {
+          return lab.helpers.fixedHeader();
         }
       });
     } else {

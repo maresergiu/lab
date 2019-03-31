@@ -38,7 +38,9 @@
         .cta-holder { padding-top: 30px; }
         .cta-holder.anim { animation: lab-global-slideUp-smooth var(--fast-transition); }
     }
-}  
+}
+
+.ie .contact-mod .slider input { padding: 0; }
 
 @media only screen and (--tablet-viewport) {
     .contact-mod { padding: 40px 0; 

@@ -57,7 +57,8 @@ window.lab || (window.lab = {});
 				'scroll': () => {
 					lab.helpers.animateElemInView();
 					lab.helpers.fixedHeader();
-				}
+				},
+				'load': () => lab.helpers.fixedHeader()
 			});
 		} else {
 			toolkit.scrollTimer.push(() => {
