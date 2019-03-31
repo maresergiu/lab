@@ -2,9 +2,10 @@
 
 (function ($) {
   function footerMod() {
-    var footerObj = {
+    var $siteFooter = $(this),
+        footerObj = {
       cache: {
-        footerMod: $(this),
+        $siteFooterCarousel: $siteFooter.find('.mod-carousel'),
         initCarouselObj: {
           modes: {
             slide: true,
@@ -81,12 +82,12 @@
       presentation: {
         genCarousel: function genCarousel() {
           footerObj.cache.initCarouselObj.dimensions.slidesInFrame = footerObj.data.generateSlides();
-          footerObj.cache.footerMod.find('.mod-carousel').modCarousel(footerObj.cache.initCarouselObj);
+          footerObj.cache.$siteFooterCarousel.modCarousel(footerObj.cache.initCarouselObj);
         },
         updateCarousel: function updateCarousel() {
           footerObj.cache.initCarouselObj.dimensions.slidesInFrame = footerObj.data.generateSlides();
           footerObj.cache.initCarouselObj.rotate.step = footerObj.cache.initCarouselObj.dimensions.slidesInFrame;
-          footerObj.cache.footerMod.find('.mod-carousel').data('modCarousel').update(null, false, footerObj.cache.initCarouselObj);
+          footerObj.cache.$siteFooterCarousel.data('modCarousel').update(null, false, footerObj.cache.initCarouselObj);
         }
       },
       init: function init() {
