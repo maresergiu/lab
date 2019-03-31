@@ -94,6 +94,7 @@ input[type=range]::-ms-fill-lower { background: #3b4b54; border: none; border-ra
 input[type=range]::-ms-fill-upper { background: #3b4b54; border: none; border-radius: 0; }
 input[type=range]::-ms-thumb { border: none; height: 16px; width: 16px; border-radius: 50%; background: #3b4b54; cursor: pointer; }
 input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper { background: #3b4b54; }
+.edge input[type=range]::-ms-thumb { -ms-transform: translateY( 4px ); transform: translateY( 4px ); }
 /* global modules
    -------------- */
 /* header */

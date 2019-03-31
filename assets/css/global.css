@@ -130,6 +130,8 @@ input[type=range]::-ms-thumb { border: none; height: 16px; width: 16px; border-r
 input[type=range]:focus::-ms-fill-lower,
 input[type=range]:focus::-ms-fill-upper { background: var(--sixth-color); }
 
+.edge input[type=range]::-ms-thumb { transform: translateY(4px); }
+
 /* global modules
    -------------- */
 /* header */

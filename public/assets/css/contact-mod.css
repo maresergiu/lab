@@ -1,0 +1,39 @@
+.contact-mod { position: relative; padding: 144px 0 92px; overflow: hidden; z-index: 0; }
+.contact-mod .bg-holder { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: .3; }
+.contact-mod .bg-holder .bg-img { position: relative; top: 50%; left: 50%; min-width: 100%; min-height: 100%; -webkit-transform: translate( -50%, -50% ); -moz-transform: translate( -50%, -50% ); -ms-transform: translate( -50%, -50% ); -o-transform: translate( -50%, -50% ); transform: translate( -50%, -50% ); }
+.contact-mod .holder { position: relative; z-index: 1; }
+.contact-mod .metter-holder { text-align: center; }
+.contact-mod .metter-holder .title { margin: 0; }
+.contact-mod .metter-holder .title, .contact-mod .metter-holder .text { color: #3b4b54; }
+.contact-mod .metter-holder .svg-holder { display: inline-block; max-width: 300px; width: 100%; margin-bottom: 23px; }
+.contact-mod .metter-holder .field { display: inline-block; max-width: 300px; width: -webkit-calc( 100% - 90px ); width: -moz-calc( 100% - 90px ); width: calc( 100% - 90px ); margin: 0 auto; overflow: hidden; vertical-align: middle; }
+.contact-mod .metter-holder .range-cta { position: relative; width: 40px; height: 40px; vertical-align: middle; }
+.contact-mod .metter-holder .range-cta:after,
+.contact-mod .metter-holder .range-cta:before { content: ''; position: absolute; top: 50%; right: 0; width: 26px; height: 2px; background-color: #3b4b54; -webkit-transform: rotate( 45deg ); -moz-transform: rotate( 45deg ); -ms-transform: rotate( 45deg ); -o-transform: rotate( 45deg ); transform: rotate( 45deg ); -webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right; z-index: 1; }
+.contact-mod .metter-holder .range-cta:before { -webkit-transform: rotate( -45deg ); -moz-transform: rotate( -45deg ); -ms-transform: rotate( -45deg ); -o-transform: rotate( -45deg ); transform: rotate( -45deg ); -webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right; }
+.contact-mod .metter-holder .range-cta.decrement { -webkit-transform: rotate( 180deg ); -moz-transform: rotate( 180deg ); -ms-transform: rotate( 180deg ); -o-transform: rotate( 180deg ); transform: rotate( 180deg ); }
+.contact-mod .form-holder { padding: 20px 18px; background-color: #3b4b54; }
+.contact-mod .form-holder .form-field { margin-bottom: 20px; }
+.contact-mod .form-holder .text { color: #b0b0b0; }
+.contact-mod .form-holder .stylish-form .stylish-select,
+.contact-mod .form-holder .stylish-form .stylish-text > span { border: none; height: 60px; background-color: #e3e3e3; }
+.contact-mod .form-holder .stylish-form .stylish-text > span { position: relative; }
+.contact-mod .form-holder .stylish-form .stylish-text > span:after { content: ''; position: absolute; top: 100%; left: 0; width: 100%; height: 2px; background-color: #ff0; }
+.contact-mod .form-holder .stylish-form .stylish-select > span.selected { border: none; padding: 20px 30px 20px 10px; background-color: #e3e3e3; }
+.contact-mod .form-holder .stylish-form .stylish-select > span > span.ico { top: 50%; -webkit-transform: translateY( -50% ); -moz-transform: translateY( -50% ); -ms-transform: translateY( -50% ); -o-transform: translateY( -50% ); transform: translateY( -50% ); border-top: 10px solid #ff0; }
+.contact-mod .form-holder .stylish-form .stylish-select > .dropdown-list { border: 2px solid #ff0; }
+.contact-mod .form-holder .cta-holder { padding-top: 30px; }
+@media only screen and (max-width: 992px) {
+ .contact-mod { padding: 40px 0; }
+ .contact-mod .metter-holder, .contact-mod .form-holder { float: none; display: block; width: 100%; max-width: 592px; margin: 40px auto 0; }
+ .contact-mod .metter-holder .svg-holder, .contact-mod .form-holder .svg-holder { max-width: 290px; margin-bottom: 10px; }
+}
+@media only screen and (max-width: 576px) {
+ .contact-mod { padding: 53px 0 46px; }
+ .contact-mod .metter-holder .text { margin-bottom: 28px; }
+ .contact-mod .metter-holder .svg-holder { max-width: 150px; margin-bottom: 28px; }
+ .contact-mod .metter-holder .field { max-width: inherit; }
+ .contact-mod .form-holder { margin-top: 56px; padding: 30px 20px 26px; }
+ .contact-mod .form-holder .title { margin-bottom: 25px; }
+ .contact-mod .form-holder .form-field { margin-bottom: 10px; }
+}
