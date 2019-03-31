@@ -56,6 +56,12 @@ window.lab || (window.lab = {});
 		lab.cache.$footer = $('#site-footer');
 		lab.cache.$main = $('#main');
 
+		// apply styling to all forms
+		stylishForms.apply();
+
+		// configuration for FormValidation API
+		formValidation.init();
+
 		// identify browser
 		toolkit.client.domApply();
 

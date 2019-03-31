@@ -48,7 +48,11 @@ window.lab || (window.lab = {});
 
     lab.cache.$header = $('#site-header');
     lab.cache.$footer = $('#site-footer');
-    lab.cache.$main = $('#main'); // identify browser
+    lab.cache.$main = $('#main'); // apply styling to all forms
+
+    stylishForms.apply(); // configuration for FormValidation API
+
+    formValidation.init(); // identify browser
 
     toolkit.client.domApply(); // if the height of the body is smaller then the page make the bodies height to strech to fit the screen 
 
