@@ -76,7 +76,7 @@ figure { display: block; }
 /* float */
 .left { float: left; }
 .right { float: right; }
-.cf { clear: both; overflow: auto; }
+.cf:after { content: ""; clear: both; display: table; }
 
 /* icons */
 .icon { width: 100%; max-width: 50px; height: 100%; max-height: 50px; }
@@ -135,17 +135,21 @@ figure { display: block; }
     .nav .nav-holder .nav-element.anim { animation: lab-global-slideUp-smooth var(--fast-transition); }            
 }
 
-#site-footer { position: relative; overflow: hidden; background-color: var(--sixth-color); text-align: center; padding: 40px 25px;
-    .contacts .contact-element { vertical-align: middle;
-        .social-nav { padding: 0 5px;
-            .platform { padding: 0 10px; }
+#site-footer { position: relative; overflow: hidden; background-color: var(--sixth-color); text-align: center; padding: 44px 0 25px;
+    .contacts { padding-bottom: 40px; 
+        .contact-element { vertical-align: middle;
+            .social-nav { padding: 0 5px;
+                .platform { padding: 0 10px;
+                    .cta { display: inline-block; }
+                }
+            }
+            .contact-detail { padding: 0 32px; border-left: 2px solid var(--seventh-color); color: var(--seventh-color); font-size: 19px; font-size: 1.9rem; }
+            .contact-detail:hover,
+            .contact-detail:focus { color: var(--second-color); }
         }
-        .contact-detail { padding: 0 32px; border-left: 2px solid var(--seventh-color); color: var(--seventh-color); }
-        .contact-detail:hover,
-        .contact-detail:focus { color: var(--second-color); }
     }
 
-    .mod-carousel { position: static; overflow: hidden; 
+    .mod-carousel { position: relative; overflow: hidden;
         .slide-container { background-color: transparent; }
         .slide-container .slide { padding: 30px 0; 
             .text { margin: 0; }
@@ -153,18 +157,23 @@ figure { display: block; }
             .text.year { color: var(--second-color); }
         }
     }
-    .mod-carousel > fieldset .step { display: block; border-color: transparent; }
-    .mod-carousel > fieldset .step:after,
-    .mod-carousel > fieldset .step:before { content: ''; position: absolute; top: 50%; ; right: 0; width: 40px; height: 2px; background-color: var(--second-color); transform: rotate(45deg); transform-origin: right; }
-    .mod-carousel > fieldset .step:before { transform: rotate(-45deg); transform-origin: right;  }
-    .mod-carousel > fieldset .step.prev:after,
-    .mod-carousel > fieldset .step.prev:before { right: auto; left: 0; transform-origin: left; }
+    .mod-carousel > fieldset {
+        .step { display: block; border-color: transparent; }
+        .step:after,
+        .step:before { content: ''; position: absolute; top: 50%; ; right: 0; width: 26px; height: 2px; background-color: var(--second-color); transform: rotate(45deg); transform-origin: right; }
+        .step:before { transform: rotate(-45deg); transform-origin: right;  }
+        .step.prev,
+        .step.next { top: 50%; }
+        .step.prev:after,
+        .step.prev:before { right: auto; left: 0; transform-origin: left; }
+    }
     .mod-carousel > .pagination-controls { display: none !important; }
     
-    .copyright { display: inline-block; margin: 0 auto; }
-    .copyright .property,
-    .copyright .value { display: inline-block; margin: 0; padding: 0; color: var(--first-color); text-align: left; font-size: 8px; font-size: 0.8rem; }
-    .copyright .value { padding-left: 10px; }
+    .copyright { display: inline-block; margin: 0 auto; padding: 85px 10px 0; 
+        .property,
+        .value { display: inline-block; margin: 0; padding: 0; color: var(--first-color); text-align: left; font-size: 12px; font-size: 1.2rem; }        
+        .value { padding-left: 10px; }
+    }
 }
 
 /* media queries
@@ -194,6 +203,27 @@ figure { display: block; }
             }
         }
     }
+
+    #site-footer .contacts { padding-bottom: 50px; }
+}
+
+@media only screen and (--mobile-viewport) {
+    #site-footer {
+        .content { display: flex; flex-direction: column-reverse; padding: 14px 0 7px; }
+        .contacts { padding: 28px 0 50px;
+            .contact-element { display: block;
+                .social-nav ul { text-align: center;
+                    .platform { float: none; }
+                }
+                .contact-detail { display: block; padding: 10px 0 0; border: none; }
+            }   
+        }
+        .copyright { padding: 0 40px;
+            .value { width: calc(100% - 10px); padding-left: 0; text-align: center; }
+            .value,
+            .property { font-size: 10px; font-size: 1rem; }
+        }
+    }   
 }
 
 /* global animations */
