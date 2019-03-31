@@ -27,6 +27,7 @@
 .contact-mod .form-holder .stylish-form .stylish-text > span { position: relative; }
 .contact-mod .form-holder .stylish-form .stylish-text > span:after { content: ''; position: absolute; top: 100%; left: 0; width: 100%; height: 2px; background-color: #ff0; }
 .contact-mod .form-holder .stylish-form .stylish-select > span.selected { border: none; padding: 20px 30px 20px 10px; background-color: #e3e3e3; }
+.contact-mod .form-holder .stylish-form .stylish-select > span.selected .text { font-size: 18px; font-size: 1.8rem; }
 .contact-mod .form-holder .stylish-form .stylish-select > span > span.ico { top: 50%; -webkit-transform: translateY( -50% ); -moz-transform: translateY( -50% ); -ms-transform: translateY( -50% ); -o-transform: translateY( -50% ); transform: translateY( -50% ); border-top: 10px solid #ff0; }
 .contact-mod .form-holder .stylish-form .stylish-select > .dropdown-list { border: 2px solid #ff0; }
 .contact-mod .form-holder .cta-holder { padding-top: 30px; }

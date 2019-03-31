@@ -18,9 +18,13 @@
 }
 
 @media only screen and (--tablet-viewport) {
-    .abilities-mod .list .list-element { height: 192px; }
+    .abilities-mod .list .list-element { height: 192px; 
+        .text { font-size: 20px; font-size: 2rem; }
+    }
 }
 
 @media only screen and (--mobile-viewport) {
-    .abilities-mod .list .list-element { width: 50%; height: 160px; }
+    .abilities-mod .list .list-element { width: 50%; height: 160px; 
+        .text { font-size: 16px; font-size: 1.6rem; }
+    }
 }

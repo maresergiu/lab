@@ -12,7 +12,9 @@
 .ie .abilities-mod .list .list-element:hover .img-holder .img { -webkit-transform: scale( 0, 0 ); -moz-transform: scale( 0, 0 ); -ms-transform: scale( 0, 0 ); -o-transform: scale( 0, 0 ); transform: scale( 0, 0 ); }
 @media only screen and (max-width: 992px) {
  .abilities-mod .list .list-element { height: 192px; }
+ .abilities-mod .list .list-element .text { font-size: 20px; font-size: 2rem; }
 }
 @media only screen and (max-width: 576px) {
  .abilities-mod .list .list-element { width: 50%; height: 160px; }
+ .abilities-mod .list .list-element .text { font-size: 16px; font-size: 1.6rem; }
 }

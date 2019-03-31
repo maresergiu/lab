@@ -114,7 +114,7 @@ svg { width: 100%; height: auto; }
 
 /* inputs
    ------ */
-::placeholder { color: var(--seventh-color); }
+::placeholder { color: var(--seventh-color); font-size: 18px; font-size: 1.8rem; }
 /* range */
 input[type=range] { -webkit-appearance: none; margin: 18px 0; width: 100%; background: transparent; }
 input[type=range]:focus { outline: none; }
