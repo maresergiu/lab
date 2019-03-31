@@ -9,6 +9,12 @@
         .title,
         .text { color: var(--sixth-color); }
         .svg-holder { display: inline-block; max-width: 300px; width: 100%; margin-bottom: 23px; }
+        .svg-holder #svg-state g { opacity: 0; }
+        .svg-holder #svg-state.state-1 g.angry,
+        .svg-holder #svg-state.state-2 g.upset,
+        .svg-holder #svg-state.state-3 g.moderate,
+        .svg-holder #svg-state.state-4 g.curious,
+        .svg-holder #svg-state.state-5 g.happy { animation: lab-global-slideUp-smooth var(--fast-transition); opacity: 1; }
         .field { display: inline-block; max-width: 300px; width: calc(100% - 90px); margin: 0 auto; overflow: hidden; vertical-align: middle; }
         .range-cta { position: relative; width: 40px; height: 40px; vertical-align: middle; }
         .range-cta:after,
@@ -19,6 +25,7 @@
     
     .form-holder { padding: 20px 18px; background-color: var(--sixth-color);
         .form-field { margin-bottom: 20px; }
+        .form-field.anim { animation: lab-global-slideUp-smooth var(--fast-transition); }
         .text { color: var(--seventh-color); }
         .stylish-form .stylish-select,
         .stylish-form .stylish-text > span { border: none; height: 60px; background-color: var(--eight-color); }
@@ -29,6 +36,7 @@
         .stylish-form .stylish-select > .dropdown-list { border: 2px solid var(--second-color); }
 
         .cta-holder { padding-top: 30px; }
+        .cta-holder.anim { animation: lab-global-slideUp-smooth var(--fast-transition); }
     }
 }  
 
@@ -47,7 +55,7 @@
             .text { margin-bottom: 28px; } 
             .svg-holder { max-width: 150px; margin-bottom: 28px; }
             .field { max-width: inherit; }
-        }         
+        }
         .form-holder { margin-top: 56px; padding: 30px 20px 26px; 
             .title { margin-bottom: 25px; } 
             .form-field { margin-bottom: 10px; }

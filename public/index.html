@@ -219,11 +219,12 @@
                     <h3 class="title">Happiness Indicator</h3>
                     <p class="text">How happy are you right now?</p>
                     <div class="svg-holder">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px"
-                            viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                        <svg class="state-5" id="svg-state" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" width="300px" height="300px" viewBox="0 0 300 300"
+                            enable-background="new 0 0 300 300" xml:space="preserve">
 
-                            <g class="smyle">
+                            <g class="happy">
                                 <path d="M37.275,103.288h225.012c0,0,12.081,67.966-37.756,66.448c-49.83-1.51-57.382-52.855-57.382-52.855l-34.733-1.511
                            c0,0-10.571,60.459-55.878,54.393C31.231,163.695,37.275,103.288,37.275,103.288" />
 
@@ -233,7 +234,22 @@
                            c2.068-3.121,6.279-3.989,9.407-1.927c3.132,2.068,4.001,6.267,1.943,9.401C221.097,202.791,193.99,243.205,145.764,243.205" />
                             </g>
 
-                            <g class="moderate hidden">
+                            <g class="curious">
+                                <path d="M90.972,137.768c11.596,0,21.031-9.325,21.031-20.79c0-11.464-9.436-20.788-21.031-20.788
+                           c-11.594,0-21.029,9.325-21.029,20.788C69.943,128.443,79.375,137.768,90.972,137.768" />
+                                <path d="M90.972,106.033c6.103,0,11.07,4.911,11.07,10.942c0,6.029-4.967,10.944-11.07,10.944c-6.103,0-11.068-4.907-11.068-10.94
+                           C79.905,110.943,84.87,106.033,90.972,106.033" />
+                                <path d="M209.028,137.768c11.594,0,21.029-9.325,21.029-20.79c0-11.464-9.436-20.788-21.029-20.788
+                           c-11.596,0-21.031,9.325-21.031,20.788C187.996,128.443,197.432,137.768,209.028,137.768" />
+                                <path d="M209.028,106.033c6.103,0,11.068,4.911,11.068,10.942c0,6.029-4.965,10.944-11.068,10.944c-6.103,0-11.07-4.907-11.07-10.94
+                           C197.958,110.943,202.925,106.033,209.028,106.033" />
+                                <path
+                                    d="M145.764,243.205c-50.845,0-73.562-40.896-74.502-42.637c-1.786-3.296-0.558-7.426,2.744-9.211
+                               c3.293-1.785,7.414-0.56,9.205,2.739c0.844,1.534,20.036,35.519,62.556,35.519c40.771,0,64.879-35.658,65.118-36.025
+                               c2.068-3.121,6.279-3.989,9.407-1.927c3.132,2.068,4.001,6.267,1.943,9.401C221.097,202.791,193.99,243.205,145.764,243.205" />
+                            </g>
+
+                            <g class="moderate">
                                 <path d="M227.119,197.408H72.882c-2.749,0-4.981,2.204-4.981,4.924c0,2.722,2.231,4.924,4.981,4.924h154.233
                            c2.749,0,4.981-2.202,4.981-4.924C232.095,199.612,229.868,197.408,227.119,197.408" />
                                 <path d="M90.972,137.768c11.596,0,21.031-9.325,21.031-20.79c0-11.464-9.436-20.788-21.031-20.788
@@ -246,7 +262,23 @@
                            C197.958,110.943,202.925,106.033,209.028,106.033" />
                             </g>
 
-                            <g class="angry hidden">
+                            <g class="upset">
+                                <path d="M227.119,197.408H72.882c-2.749,0-4.981,2.204-4.981,4.924c0,2.722,2.231,4.924,4.981,4.924h154.233
+                                c2.749,0,4.981-2.202,4.981-4.924C232.095,199.612,229.868,197.408,227.119,197.408">
+                                </path>
+                                <path d="M126.259,94.28c-0.769,0-1.55-0.123-2.319-0.387L70.522,75.712c-3.721-1.263-5.696-5.272-4.413-8.945
+                               c1.28-3.673,5.325-5.629,9.053-4.361l53.418,18.181c3.721,1.264,5.695,5.271,4.412,8.946
+                               C131.975,92.448,129.214,94.28,126.259,94.28" />
+                                <path d="M173.734,94.28c-3.306,0-6.274-2.289-6.969-5.615c-0.79-3.807,1.684-7.53,5.54-8.318l54.605-11.144
+                               c3.839-0.791,7.626,1.665,8.416,5.468c0.792,3.804-1.682,7.531-5.539,8.318l-54.605,11.144
+                               C174.697,94.233,174.213,94.28,173.734,94.28" />
+                                <path d="M8.738,181.816h280.151V104.25H8.738V181.816z M113.203,151.169c0,3.887-3.188,7.037-7.122,7.037H91.835
+                               c-3.933,0-7.121-3.15-7.121-7.037v-14.074c0-3.888,3.187-7.037,7.121-7.037h14.246c3.933,0,7.122,3.152,7.122,7.037V151.169z
+                                M215.29,151.169c0,3.887-3.19,7.037-7.122,7.037h-14.245c-3.93,0-7.122-3.15-7.122-7.037v-14.074c0-3.888,3.191-7.037,7.122-7.037
+                               h14.245c3.931,0,7.122,3.152,7.122,7.037V151.169z" />
+                            </g>
+
+                            <g class="angry">
                                 <path d="M150,250.881c-0.813,0-1.641-0.141-2.456-0.434c-3.689-1.341-5.588-5.385-4.23-9.033
                            c0.442-1.184,11.122-29.215,39.333-41.343c18.906-8.131,40.8-7.134,65.081,2.967c3.62,1.511,5.328,5.631,3.799,9.221
                            c-1.523,3.588-5.699,5.262-9.326,3.757c-20.55-8.548-38.68-9.569-53.875-3.037c-22.686,9.753-31.56,33.049-31.641,33.286
@@ -262,13 +294,13 @@
                             M215.29,151.169c0,3.887-3.19,7.037-7.122,7.037h-14.245c-3.93,0-7.122-3.15-7.122-7.037v-14.074c0-3.888,3.191-7.037,7.122-7.037
                            h14.245c3.931,0,7.122,3.152,7.122,7.037V151.169z" />
                             </g>
-                            <path class="outine" d="M260.998,22.909c11.238,0,20.387,9.146,20.387,20.387v220.863c0,11.243-9.149,20.387-20.387,20.387H39.002
+                            <path class="outline" d="M260.998,22.909c11.238,0,20.387,9.146,20.387,20.387v220.863c0,11.243-9.149,20.387-20.387,20.387H39.002
                            c-11.241,0-20.387-9.144-20.387-20.387V43.296c0-11.241,9.146-20.387,20.387-20.387H260.998 M260.998,9.317H39.002
                            c-18.767,0-33.98,15.213-33.98,33.979v220.863c0,18.769,15.213,33.982,33.98,33.982h221.996c18.764-0.003,33.98-15.21,33.98-33.982
                            V43.296C294.978,24.53,279.762,9.317,260.998,9.317" />
                         </svg>
                     </div>
-                    <div data-stylish-form="true">
+                    <div class="slider" data-stylish-form="true">
                         <button class="cta range-cta decrement" type="button"></button>
                         <div class="field">
                             <label class="hidden-accessibility" for="range">Range</label>
@@ -282,80 +314,88 @@
                     <div class="mod-form cf" data-error-summary="true" data-instant-feedback="true"
                         data-disable-submit="requiredonly" data-inline-errors="true"
                         data-server-error-message="There was an error, please try again." data-stylish-form="true">
-
                         <!-- form section -->
-                        <div class="form-section" data-batch-name="" data-endpoint=""
-                            data-partial-server-stepover="false">
-                            <h3 class="title">Elegant Comunnication</h3>
-                            <!-- form field -->
-                            <form class="contact-form" name="sentMessage">
-                                <!-- name -->
-                                <div class="form-field anim-mod" data-delay="300" data-reverse-anim="slide-up-hide"
-                                    data-sync="true" data-type="text" data-field-id="ModelPropertyA"
-                                    data-validation="required">
-                                    <label class="sub-title hidden-accessibility" for="full-name">Full name</label>
-                                    <input type="text" placeholder="full name" name="name" id="full-name" />
+                        <div class="content">
+                            <div class="form-section" data-batch-name="" data-endpoint=""
+                                data-partial-server-stepover="false">
+                                <h3 class="title">Elegant Comunnication</h3>
+                                <!-- form field -->
+                                <form class="contact-form" name="sentMessage">
+                                    <!-- name -->
+                                    <div class="form-field anim-mod" data-delay="300" data-reverse-anim="slide-up-hide"
+                                        data-sync="true" data-type="text" data-field-id="ModelPropertyA"
+                                        data-validation="required">
+                                        <label class="sub-title hidden-accessibility" for="full-name">Full name</label>
+                                        <input type="text" placeholder="full name" name="fullName" id="full-name" />
 
-                                    <!-- error messages -->
-                                    <div class="err-msgs">
-                                        <div data-validation="required">This field is REQUIRED - please enter some text
+                                        <!-- error messages -->
+                                        <div class="err-msgs">
+                                            <div data-validation="required">This field is REQUIRED - please enter some
+                                                text
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- email -->
-                                <div class="form-field anim-mod" data-delay="600" data-reverse-anim="slide-up-hide"
-                                    data-sync="true" data-type="text" data-field-id="ModelPropertyA"
-                                    data-validation="required|regex" data-custom-regex="^^\S+@\S+\.\S+$">
-                                    <label class="sub-title hidden-accessibility" for="email">Email address</label>
-                                    <input type="text" placeholder="email address *" id="email" name="email" />
+                                    <!-- email -->
+                                    <div class="form-field anim-mod" data-delay="600" data-reverse-anim="slide-up-hide"
+                                        data-sync="true" data-type="text" data-field-id="ModelPropertyA"
+                                        data-validation="required|regex" data-custom-regex="^^\S+@\S+\.\S+$">
+                                        <label class="sub-title hidden-accessibility" for="email">Email address</label>
+                                        <input type="text" placeholder="email address *" id="email" name="email" />
 
-                                    <!-- error messages -->
-                                    <div class="err-msgs">
-                                        <div data-validation="required">This field is REQUIRED - please enter some text
+                                        <!-- error messages -->
+                                        <div class="err-msgs">
+                                            <div data-validation="required">This field is REQUIRED - please enter some
+                                                text
+                                            </div>
+                                            <div data-validation="regex">Invalid email address</div>
                                         </div>
-                                        <div data-validation="regex">Invalid email address</div>
                                     </div>
-                                </div>
-                                <!-- phone -->
-                                <div class="form-field anim-mod" data-delay="450" data-reverse-anim="slide-up-hide"
-                                    data-sync="true" data-type="text" data-field-id="ModelPropertyA"
-                                    data-validation="required">
-                                    <label class="sub-title hidden-accessibility" for="phone">Phone number</label>
-                                    <input type="text" placeholder="contact number" name="phone" id="phone" />
+                                    <!-- phone -->
+                                    <div class="form-field anim-mod" data-delay="450" data-reverse-anim="slide-up-hide"
+                                        data-sync="true" data-type="text" data-field-id="ModelPropertyA"
+                                        data-validation="required|number">
+                                        <label class="sub-title hidden-accessibility" for="phone">Phone number</label>
+                                        <input type="text" placeholder="contact number" name="phone" id="phone" />
 
-                                    <!-- error messages -->
-                                    <div class="err-msgs">
-                                        <div data-validation="required">This field is REQUIRED - please enter some text
+                                        <!-- error messages -->
+                                        <div class="err-msgs">
+                                            <div data-validation="required">This field is REQUIRED - please enter your
+                                                phone
+                                                number</div>
+                                            <div data-validation="number">Required number</div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-field anim-mod cf" data-delay="450" data-reverse-anim="slide-up-hide"
-                                    data-type="select" data-sync="true" data-field-id="ModelPropertyA"
-                                    data-validation='required|{"rule" : "match", "val": "Valid Option" }'>
-                                    <label class="sub-title hidden-accessibility" for="purpose">Basic Dropdown</label>
-                                    <select id="purpose" name="purpose">
-                                        <option value="Valid Option">digital strategy or transformation</option>
-                                        <option value="Valid Option">Improvements</option>
-                                        <option value="Valid Option">Marketing strategy</option>
-                                    </select>
-                                    <div class="err-msgs">
-                                        <div data-validation="required">This field is REQUIRED - please select an option
+                                    <div class="form-field anim-mod cf" data-delay="450"
+                                        data-reverse-anim="slide-up-hide" data-type="select" data-sync="true"
+                                        data-field-id="ModelPropertyA" data-validation='required'>
+                                        <label class="sub-title hidden-accessibility" for="purpose">Basic
+                                            Dropdown</label>
+                                        <select id="purpose" name="userGoal">
+                                            <option value="digital strategy or transformation">digital strategy or
+                                                transformation</option>
+                                            <option value="improvements">improvements</option>
+                                            <option value="marketing strategy">marketing strategy</option>
+                                        </select>
+                                        <div class="err-msgs">
+                                            <div data-validation="required">This field is REQUIRED - please select an
+                                                option
+                                            </div>
+                                            <div data-validation="match">Must match value "Valid Option"</div>
                                         </div>
-                                        <div data-validation="match">Must match value "Valid Option"</div>
                                     </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="cta-holder cf">
-                            <!-- full form submit -->
-                            <button class="cta action full-width full-submit right not-active anim-mod" data-delay="900"
-                                data-reverse-anim="slide-up-hide" data-sync="true" disabled>
-                                <span>Contact me</span>
-                            </button>
+                                </form>
+                            </div>
+                            <div class="cta-holder cf  anim-mod" data-delay="900" data-reverse-anim="slide-up-hide"
+                                data-sync="true">
+                                <!-- full form submit -->
+                                <button class="cta action full-width full-submit right not-active" disabled>
+                                    <span>Contact me</span>
+                                </button>
+                            </div>
                         </div>
                         <div class="form-feedback hidden-accessibility">
-                            <h3 class="sub-title">I received your email!</h3>
-                            <p class="text">Thank you for getting in touch. I'll contact you in the next 48h.</p>
+                            <h3 class="title">Success!</h3>
+                            <p class="text">Thank you for getting in touch. We'll contact you in the next 24h.</p>
                         </div>
                     </div>
                 </div>
@@ -473,7 +513,7 @@
         </dl>
     </footer>
 
-    <!-- modules style sheets -->
+    <!-- stylesheet modules -->
     <link rel="stylesheet" href="assets/css/hero-mod.css" />
     <link rel="stylesheet" href="assets/css/rich-text-mod.css" />
     <link rel="stylesheet" href="assets/css/abilities-mod.css" />
@@ -486,9 +526,11 @@
     <script src="assets/scripts/global.js"></script>
     <script src="assets/scripts/helpers.js"></script>
 
-    <!-- modules -->
+    <!-- script modules -->
+    <script src="assets/scripts/header-mod.js"></script>
     <script src="assets/scripts/hero-mod.js"></script>
     <script src="assets/scripts/footer-mod.js"></script>
+    <script src="assets/scripts/contact-mod.js"></script>
 </body>
 
 </html>

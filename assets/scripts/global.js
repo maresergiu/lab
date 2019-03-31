@@ -8,28 +8,6 @@
 window.lab || (window.lab = {});
 
 (function ($) {
-	function siteHeaderMod() {
-		var burgerTimer;
-
-		lab.cache.$header.find('.burger').on('click', function () {
-			let $thisBurger = $(this);
-
-			clearTimeout(burgerTimer);
-			burgerTimer = setTimeout(() => {
-				if (!$thisBurger.hasClass('active')) {
-					$thisBurger.parent().find('.nav-element').removeClass('anim');
-				}
-
-				$thisBurger.toggleClass('active');
-
-				if ($thisBurger.hasClass('active')) {
-					lab.helpers.animateElemInView();
-				}
-
-			}, lab.cache.timer.fast);
-		});
-	}
-
 	$(document).ready(function () {
 
 		$.extend(true, lab, {
@@ -65,29 +43,27 @@ window.lab || (window.lab = {});
 		// identify browser
 		toolkit.client.domApply();
 
-		// if the height of the body is smaller then the page make the bodies height to strech to fit the screen 
-		lab.helpers.isContentScrolable();
-
 		// detect if js in enable
 		lab.cache.$html.toggleClass('no-js js');
 
 		// animate the elements that are in the viewport on load
 		lab.helpers.animateElemInView();
 
-		// global modules
-		if (lab.cache.$header.length) {
-			siteHeaderMod();
-		}
-
 		// window events
 		// -------------
 		// avoiding the momentum scrolling on mobile and trigger animations
 		if (lab.helpers.deviceWithTouch()) {
 			lab.cache.$window.on({
-				'scroll': lab.helpers.animateElemInView
+				'scroll': () => {
+					lab.helpers.animateElemInView();
+					lab.helpers.fixedHeader();
+				}
 			});
 		} else {
-			toolkit.scrollTimer.push(lab.helpers.animateElemInView);
+			toolkit.scrollTimer.push(() => {
+				lab.helpers.animateElemInView();
+				lab.helpers.fixedHeader();
+			});
 		}
 	});
 })(jQuery);

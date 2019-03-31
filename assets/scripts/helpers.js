@@ -11,14 +11,6 @@ lab.helpers = {
             return true;
         }
     },
-    // calling the scroll plugin
-    scrollBarPlug: function ($starPoint, plugInObj) {
-        if (lab.cache.$window.width() > lab.config.breakpoints.X_MEDIUM_WIDTH) {
-            var settings = typeof plugInObj === 'undefined' ? {} : plugInObj;
-
-            $starPoint.mCustomScrollbar(settings);
-        }
-    },
     // check if the device has touch screen
     deviceWithTouch: function () {
         var isTouchable;
@@ -32,130 +24,22 @@ lab.helpers = {
 
         return isTouchable;
     },
-    // populate dropdown for auto complete
-    dropDownAutocomplete: function ($path, results, []) {
-        var currentPlugins = '';
-
-        // storing all needed plugins in a string
-        arguments[arguments.length - 1].forEach(function (thisPlugIn) {
-            currentPlugins += (' ' + thisPlugIn);
-        });
-
-        // int the plug-in
-        $path.textext({
-            plugins: currentPlugins
-        }).bind('getSuggestions', function (e, data) {
-            var list = results,
-                textext = $(e.target).textext()[0],
-                query = (data ? data.query : '') || '';
-
-            $(this).trigger(
-                'setSuggestions',
-                { result: textext.itemManager().filter(list, query) }
-            );
-        });
-    },
-    // create an objectthat will be a blue print of a form selection 
-    stringifyFilters: function ($starPoint) {
-        var $filterRows = $starPoint.find('.field'),
-            filtersObj = {},
-            key = '',
-            subKey = '',
-            $subFields;
-
-        $filterRows.each(function () {
-            var $thisFilterRow = $(this),
-                $fieldInputs = $thisFilterRow.find('input'),
-                elementHasSubFields = $thisFilterRow.data('sub-fields');
-
-            key = $thisFilterRow.data('name');
-
-            if (elementHasSubFields) {
-                $subFields = $filterRows.find('.sub-field');
-
-                $subFields.each(function () {
-                    var $thisSubField = $(this);
-
-                    subKey = key + '-' + $thisSubField.data('name');
-                    filtersObj[subKey] = [];
-                    filtersObj[subKey].push(Number($thisSubField.find('input').val()));
-                });
-
-            } else {
-                filtersObj[key] = [];
-
-                if ($thisFilterRow.data('input') === 'text' && $fieldInputs.val().length) {
-                    filtersObj[key].push($fieldInputs.val());
-                } else if ($thisFilterRow.data('input') === 'checkbox') {
-                    $fieldInputs.each(function (index) {
-                        var $thisCheckbox = $(this),
-                            filterDefaultValue = 'All ';
-
-                        if ($thisCheckbox.prev().hasClass('checked')) {
-                            filtersObj[key].push($thisCheckbox.prop('name'));
-                        }
-
-                        // if filter related properties and regions is empty on click over the CTA the default value is selected
-                        if (index === ($fieldInputs.length - 1) && filtersObj[key].length === 0) {
-                            filterDefaultValue += key;
-                            filtersObj[key].push(filterDefaultValue);
-                        }
-                    });
-                }
+    // changes state of header on window scroll
+    fixedHeader: function () {
+        if (lab.cache.$window.scrollTop() > lab.cache.$header.outerHeight() * 2) {
+            if (!lab.cache.$header.hasClass('fixed')) {
+                lab.cache.$header.removeClass('slide').addClass('fixed');
+                setTimeout(function () {
+                    lab.cache.$header.addClass('slide');
+                }, lab.cache.timer.fast);
             }
-        });
-
-        // this stringfy obj will be passed as a parameter in the request
-        filtersObj = JSON.stringify(filtersObj);
-        return filtersObj;
-    },
-    // standard ajax call
-    ajaxCall: function (typeOfRequest, url, data, doneMethod, failMethod) {
-        $.ajax({
-            method: typeOfRequest,
-            url: url,
-            data: data
-        }).done(function (response) {
-            doneMethod(response);
-        }).fail(function (response) {
-            failMethod(response);
-        });
-    },
-    // change the url 
-    pageNewUrl: function (path) {
-        var newPath = window.location.origin + path;
-
-        // load the map page 
-        document.location.replace(newPath);
-    },
-    // toggle the loader visibility
-    toggleLoader: function () {
-        var $loader = lab.cache.$main.find('.loader-mod');
-
-        // reset the view
-        lab.helpers.isContentScrolable();
-
-        if ($loader.hasClass('anim')) {
-            $loader.removeClass('anim');
-        } else {
-            $loader.addClass('anim');
-        }
-    },
-    // generate markup with handlebars
-    generateTemplate: function (id, data) {
-        var $source = $(id).html(),
-            template = Handlebars.compile($source),
-            markup = template(data);
-
-        return markup;
-    },
-    // check if the page content is bigger that window's height
-    isContentScrolable: function () {
-        lab.cache.$html.removeClass('sp');
-
-        // if map page is present and the page is loaded on desktop or the height of the body is smaller then the height of window  
-        if ((lab.cache.$body.hasClass('map-page') && lab.cache.$window.width() > lab.config.breakpoints.X_MEDIUM_WIDTH) || (lab.cache.$body.height() < lab.cache.$window.height())) {
-            lab.cache.$html.addClass('sp');
+        } else if (lab.cache.$window.scrollTop() < lab.cache.$header.outerHeight() * 2) {
+            if (lab.cache.$header.hasClass('fixed')) {
+                lab.cache.$header.removeClass('slide fixed');
+                setTimeout(function () {
+                    lab.cache.$header.addClass('slide');
+                }, lab.cache.timer.fast);
+            }
         }
     },
     // animate de elements when entering the viewport
