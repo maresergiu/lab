@@ -3,10 +3,10 @@
 
     .mod-carousel { position: absolute; top: 0; left: 0; height: 100%;  width: 100%; z-index: 1; 
         .slide-container { position: absolute; top: 0; left: 0; overflow: hidden; }
-        .slide-container .slide .img { width: 100%; height: auto; min-width: 100%; min-height: 100%; }
+        .slide-container .slide .img { position: relative; top: 50%; width: 116%; height: auto; min-width: 100%; min-height: 100%; transform: translateY(-50%); }
     }
     .mod-carousel > .pagination-controls > button { background-color: var(--first-color); border: 1px solid var(--first-color); }
-    .mod-carousel > .pagination-controls > button.active { background: var(--fifth-color) !important; }        
+    .mod-carousel > .pagination-controls > button.active { background: var(--fifth-color) !important; }
     .mod-carousel > fieldset .step.next, 
     .mod-carousel > fieldset .step.prev { display: none !important; }
 }
