@@ -163,7 +163,7 @@ figure { display: block; }
         .step:before { content: ''; position: absolute; top: 50%; ; right: 0; width: 26px; height: 2px; background-color: var(--second-color); transform: rotate(45deg); transform-origin: right; }
         .step:before { transform: rotate(-45deg); transform-origin: right;  }
         .step.prev,
-        .step.next { top: 50%; }
+        .step.next { top: 50%; display: none !important; }
         .step.prev:after,
         .step.prev:before { right: auto; left: 0; transform-origin: left; }
     }
@@ -205,6 +205,8 @@ figure { display: block; }
     }
 
     #site-footer .contacts { padding-bottom: 50px; }
+    #site-footer .mod-carousel > fieldset .step.prev, 
+    #site-footer .mod-carousel > fieldset .step.next { display: inline-block !important; }
 }
 
 @media only screen and (--mobile-viewport) {

@@ -109,7 +109,7 @@ header, section, footer, aside, nav, main, article, figure { display: block; }
 #site-footer .mod-carousel > fieldset .step:before { content: ''; position: absolute; top: 50%; right: 0; width: 26px; height: 2px; background-color: #ff0; -webkit-transform: rotate( 45deg ); -moz-transform: rotate( 45deg ); -ms-transform: rotate( 45deg ); -o-transform: rotate( 45deg ); transform: rotate( 45deg ); -webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right; }
 #site-footer .mod-carousel > fieldset .step:before { -webkit-transform: rotate( -45deg ); -moz-transform: rotate( -45deg ); -ms-transform: rotate( -45deg ); -o-transform: rotate( -45deg ); transform: rotate( -45deg ); -webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right; }
 #site-footer .mod-carousel > fieldset .step.prev,
-#site-footer .mod-carousel > fieldset .step.next { top: 50%; }
+#site-footer .mod-carousel > fieldset .step.next { top: 50%; display: none !important; }
 #site-footer .mod-carousel > fieldset .step.prev:after,
 #site-footer .mod-carousel > fieldset .step.prev:before { right: auto; left: 0; -webkit-transform-origin: left; -moz-transform-origin: left; -ms-transform-origin: left; -o-transform-origin: left; transform-origin: left; }
 #site-footer .mod-carousel > .pagination-controls { display: none !important; }
@@ -135,6 +135,8 @@ header, section, footer, aside, nav, main, article, figure { display: block; }
  #site-header .nav .nav-holder .nav-element { display: block; text-align: center; float: none; }
  #site-header .nav .nav-holder .nav-element .link { color: #ff0; }
  #site-footer .contacts { padding-bottom: 50px; }
+ #site-footer .mod-carousel > fieldset .step.prev,
+ #site-footer .mod-carousel > fieldset .step.next { display: inline-block !important; }
 }
 @media only screen and (max-width: 576px) {
  #site-footer .content { display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: reverse; -webkit-flex-direction: column-reverse; -moz-box-orient: vertical; -moz-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; padding: 14px 0 7px; }
